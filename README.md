@@ -1,16 +1,13 @@
-### Hi there 👋
+### Greetings, fam!
 
-<!--
-**jrg94/jrg94** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Right now, I'm planning to use this space to share my latest blog posts. 
+Until then, here's the template GitHub provides!
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- 🔭 I’m currently working on earning my PhD in Engineering Education
+- 🌱 I’m currently learning about beliefs in Engineering Education
+- 👯 I’m looking to collaborate on any of my The Renegade Coder projects
+- 🤔 I’m looking for help with maintaining my Sample Programs repo
+- 💬 Ask me about Python!
+- 📫 How to reach me: jeremy.grifski@therenegadecoder.com
+- 😄 Pronouns: he/him/his
+- ⚡ Fun fact: My favorite hockey team is the Pittsburgh Penguins
