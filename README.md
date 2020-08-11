@@ -11,3 +11,12 @@ Until then, here's the template GitHub provides!
 - 📫 How to reach me: jeremy.grifski@therenegadecoder.com
 - 😄 Pronouns: he/him/his
 - ⚡ Fun fact: My favorite hockey team is the Pittsburgh Penguins
+
+Also, here are some fun links related to my website:
+
+- [The Renegade Coder](https://therenegadecoder.com/)
+- [Patreon](https://www.patreon.com/TheRenegadeCoder)
+- [Discord](https://discord.gg/Jhmtj7Z)
+- [Mailing List](https://newsletter.therenegadecoder.com/)
+- [Twitter](https://twitter.com/RenegadeCoder94)
+- [YouTube](https://www.youtube.com/channel/UCpyoVwOqYRlSAEUPEn7P9hw)
