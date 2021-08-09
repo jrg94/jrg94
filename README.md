@@ -1,9 +1,12 @@
 # Welcome to My Profile!
 
-This week's code snippet is brought to you by [Subete](https://subete.therenegadecoder.com/en/latest/) and the [Sample Programs repo](https://sample-programs.therenegadecoder.com/).
+This week's code snippet, Hello World in Nice, is brought to you by [Subete](https://subete.therenegadecoder.com/en/latest/) and the [Sample Programs repo](https://sample-programs.therenegadecoder.com/).
 
-```Fetlang
-make slave scream "Hello, World!"
+```Nice
+void main(String[] args)
+{
+  System.out.println("Hello, world!");
+}
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com).
