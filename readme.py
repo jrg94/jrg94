@@ -45,7 +45,7 @@ def generate_readme(posts: list, code: SampleProgram) -> Document:
     readme.add_code(code.code().encode("ascii", "ignore").decode("ascii").strip(), lang=code.language())
     readme.add_paragraph("Below you'll find an up-to-date list of articles by me on The Renegade Coder.") \
         .insert_link("The Renegade Coder", "https://therenegadecoder.com")
-    readme.add_element(MDList([Paragraph([random.choice(emojis)," ", InlineText(post.title, url=post.link)]) for post in posts]))
+    readme.add_element(MDList([Paragraph([random.choice(emojis), " ", InlineText(post.title, url=post.link)]) for post in posts]))
     readme.add_paragraph("Also, here are some fun links you can use to support my work.")
     readme.add_element(MDList([
         InlineText("Patreon", url="https://www.patreon.com/TheRenegadeCoder"),
