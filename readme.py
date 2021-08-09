@@ -17,7 +17,7 @@ def get_recent_posts() -> list:
     return feed
 
 
-def get_code_snippet() -> SampleProgram:
+def get_code_snippet() -> SampleProgram:        
     code = repo.random_program()
     return code
 
@@ -25,10 +25,10 @@ def get_code_snippet() -> SampleProgram:
 def generate_readme(posts: list, code: SampleProgram) -> Document:
     readme = Document("README")
     readme.add_header("Welcome to My Profile!")
-    readme.add_paragraph("This week's code snippet is brought to you by Subete and the Sample Programs repo.") \
+    readme.add_paragraph(f"This week's code snippet, {code}, is brought to you by Subete and the Sample Programs repo.") \
         .insert_link("Subete", url="https://subete.therenegadecoder.com/en/latest/") \
         .insert_link("Sample Programs repo", url="https://sample-programs.therenegadecoder.com/")
-    readme.add_code(code.code().strip(), lang=code.language())
+    readme.add_code(code.code().encode("ascii", "ignore").decode("ascii").strip(), lang=code.language())
     readme.add_paragraph("Below you'll find an up-to-date list of articles by me on The Renegade Coder.") \
         .insert_link("The Renegade Coder", "https://therenegadecoder.com")
     readme.add_element(MDList([InlineText(post.title, url=post.link) for post in posts]))
