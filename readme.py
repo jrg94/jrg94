@@ -22,7 +22,7 @@ def get_recent_posts() -> list:
 def generate_readme(posts: list) -> Document:
     readme = Document("README")
     readme.add_header("Welcome to My Profile!")
-    readme.add_paragraph("Below you'll find an up to date list of articles by me.")
+    readme.add_paragraph("Below you'll find an up to date list of articles by me on The Renegade Coder.").insert_link("The Renegade Coder", "https://therenegadecoder.com")
     readme.add_element(MDList([InlineText(post.title, url=post.link) for post in posts]))
     readme.add_paragraph("Also, here are some fun links you can use to support my work.")
     readme.add_element(MDList([
