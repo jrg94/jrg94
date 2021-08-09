@@ -1,5 +1,14 @@
 # Welcome to My Profile!
 
+This week's code snippet is brought to you by [Subete](https://subete.therenegadecoder.com/en/latest/) and the [Sample Programs repo](https://sample-programs.therenegadecoder.com/).
+
+```Nice
+void main(String[] args)
+{
+  System.out.println("Hello, world!");
+}
+```
+
 Below you'll find an up to date list of articles by me on [The Renegade Coder](https://therenegadecoder.com).
 
 - [Breaking Down a Hello World Discord Bot in Python](https://therenegadecoder.com/code/breaking-down-a-hello-world-discord-bot-in-python/)

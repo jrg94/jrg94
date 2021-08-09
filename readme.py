@@ -2,8 +2,11 @@ import logging
 from datetime import datetime
 
 import feedparser
+import subete
 from snakemd import Document, InlineText, MDList
+from subete.repo import SampleProgram
 
+repo = subete.load()
 logger = logging.getLogger(__name__)
 
 
@@ -14,10 +17,19 @@ def get_recent_posts() -> list:
     return feed
 
 
-def generate_readme(posts: list) -> Document:
+def get_code_snippet() -> SampleProgram:
+    code = repo.random_program()
+    return code
+
+
+def generate_readme(posts: list, code: SampleProgram) -> Document:
     readme = Document("README")
     readme.add_header("Welcome to My Profile!")
-    readme.add_paragraph("Below you'll find an up to date list of articles by me on The Renegade Coder.") \
+    readme.add_paragraph("This week's code snippet is brought to you by Subete and the Sample Programs repo.") \
+        .insert_link("Subete", url="https://subete.therenegadecoder.com/en/latest/") \
+        .insert_link("Sample Programs repo", url="https://sample-programs.therenegadecoder.com/")
+    readme.add_code(code.code().strip(), lang=code.language())
+    readme.add_paragraph("Below you'll find an up-to-date list of articles by me on The Renegade Coder.") \
         .insert_link("The Renegade Coder", "https://therenegadecoder.com")
     readme.add_element(MDList([InlineText(post.title, url=post.link) for post in posts]))
     readme.add_paragraph("Also, here are some fun links you can use to support my work.")
@@ -38,5 +50,6 @@ def generate_readme(posts: list) -> Document:
 if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG)
     posts = get_recent_posts()
-    readme = generate_readme(posts)
+    code = get_code_snippet()
+    readme = generate_readme(posts, code)
     readme.output_page("")
