@@ -24,7 +24,7 @@ jobs:
       run: pip install -r requirements.txt
         
     - name: Generate README
-      run: #yomu --log=DEBUG
+      run: py readme.py
 
     - name: Commit wiki
       continue-on-error: true

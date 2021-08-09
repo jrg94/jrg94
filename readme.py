@@ -2,8 +2,7 @@ import logging
 from datetime import datetime
 
 import feedparser
-from snakemd import Document
-from snakemd.generator import InlineText, MDList
+from snakemd import Document, InlineText, MDList
 
 logger = logging.getLogger(__name__)
 
