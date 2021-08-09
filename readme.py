@@ -1,13 +1,27 @@
 import logging
+import random
 from datetime import datetime
 
 import feedparser
 import subete
-from snakemd import Document, InlineText, MDList
+from snakemd import Document, InlineText, MDList, Paragraph
 from subete.repo import SampleProgram
 
 repo = subete.load()
 logger = logging.getLogger(__name__)
+emojis = [
+    ":fu:",
+    ":exclamation:",
+    ":notes:",
+    ":cat:",
+    ":seedling:",
+    ":milky_way:",
+    ":lock:",
+    ":door:",
+    ":gem:",
+    ":tea:",
+    ":dango:"
+]
 
 
 def get_recent_posts() -> list:
@@ -31,7 +45,7 @@ def generate_readme(posts: list, code: SampleProgram) -> Document:
     readme.add_code(code.code().encode("ascii", "ignore").decode("ascii").strip(), lang=code.language())
     readme.add_paragraph("Below you'll find an up-to-date list of articles by me on The Renegade Coder.") \
         .insert_link("The Renegade Coder", "https://therenegadecoder.com")
-    readme.add_element(MDList([InlineText(post.title, url=post.link) for post in posts]))
+    readme.add_element(MDList([Paragraph([random.choice(emojis)," ", InlineText(post.title, url=post.link)]) for post in posts]))
     readme.add_paragraph("Also, here are some fun links you can use to support my work.")
     readme.add_element(MDList([
         InlineText("Patreon", url="https://www.patreon.com/TheRenegadeCoder"),
