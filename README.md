@@ -2,14 +2,11 @@
 
 This week's code snippet is brought to you by [Subete](https://subete.therenegadecoder.com/en/latest/) and the [Sample Programs repo](https://sample-programs.therenegadecoder.com/).
 
-```Nice
-void main(String[] args)
-{
-  System.out.println("Hello, world!");
-}
+```Fetlang
+make slave scream "Hello, World!"
 ```
 
-Below you'll find an up to date list of articles by me on [The Renegade Coder](https://therenegadecoder.com).
+Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com).
 
 - [Breaking Down a Hello World Discord Bot in Python](https://therenegadecoder.com/code/breaking-down-a-hello-world-discord-bot-in-python/)
 - [Chiropractors Have Broken My YouTube Recommendations](https://therenegadecoder.com/blog/chiropractors-have-broken-my-youtube-recommendations/)
