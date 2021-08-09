@@ -33,7 +33,7 @@ def generate_readme(posts: list) -> Document:
         InlineText("YouTube", url="https://www.youtube.com/channel/UCpyoVwOqYRlSAEUPEn7P9hw")
     ]))
     readme.add_horizontal_rule()
-    readme.add_paragraph("This document was automatically rendered using SnakeMD.")
+    readme.add_paragraph("This document was automatically rendered using SnakeMD.").insert_link("SnakeMD", "https://snakemd.therenegadecoder.com")
     return readme
 
 
