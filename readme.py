@@ -50,7 +50,7 @@ def generate_readme(posts: list, code: SampleProgram) -> Document:
     readme.add_element(MDList([
         InlineText("Patreon", url="https://www.patreon.com/TheRenegadeCoder"),
         InlineText("Discord", url="https://discord.gg/Jhmtj7Z"),
-        InlineText("Mailing List", url="https://newsletter.therenegadecoder.com/"),
+        InlineText("Mailing List", url="https://therenegadecoder.com/about/newsletter"),
         InlineText("Twitter", url="https://twitter.com/RenegadeCoder94"),
         InlineText("YouTube", url="https://www.youtube.com/channel/UCpyoVwOqYRlSAEUPEn7P9hw")
     ]))
