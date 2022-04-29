@@ -26,9 +26,11 @@ emojis = [
 
 def get_recent_posts() -> list:
     url = "https://therenegadecoder.com/feed/"
-    feed = feedparser.parse(url).entries
-    logger.debug(f"Collected {len(feed)} posts")
-    return feed
+    feed = feedparser.parse(url)
+    logger.debug(f"Loaded feed: {feed}")
+    entries = feed.entries
+    logger.debug(f"Collected {len(entries)} posts")
+    return entries
 
 
 def get_code_snippet() -> SampleProgram:        
@@ -42,7 +44,7 @@ def generate_readme(posts: list, code: SampleProgram) -> Document:
     readme.add_paragraph(f"This week's code snippet, {code}, is brought to you by Subete and the Sample Programs repo.") \
         .insert_link("Subete", url="https://subete.jeremygrifski.com/en/latest/") \
         .insert_link("Sample Programs repo", url="https://sampleprograms.io/")
-    readme.add_code(code.code().encode("ascii", "ignore").decode("ascii").strip(), lang=code.language())
+    readme.add_code(code.code().encode("ascii", "ignore").decode("ascii").strip(), lang=code.language_name())
     readme.add_paragraph("Below you'll find an up-to-date list of articles by me on The Renegade Coder.") \
         .insert_link("The Renegade Coder", "https://therenegadecoder.com")
     readme.add_element(MDList([Paragraph([random.choice(emojis), " ", InlineText(post.title, url=post.link)]) for post in posts]))
