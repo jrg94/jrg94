@@ -213,4 +213,4 @@ Also, here are some fun links you can use to support my work.
 
 ---
 
-This document was automatically rendered on 2022-07-29 using [SnakeMD](https://snakemd.therenegadecoder.com).
+This document was automatically rendered on 2022-07-29 using [SnakeMD](https://www.snakemd.io).
