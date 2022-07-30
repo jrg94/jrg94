@@ -59,7 +59,7 @@ def generate_readme(posts: list, code: SampleProgram) -> Document:
     readme.add_horizontal_rule()
     now = datetime.today().strftime('%Y-%m-%d')
     readme.add_paragraph(f"This document was automatically rendered on {now} using SnakeMD.") \
-        .insert_link("SnakeMD", "https://snakemd.therenegadecoder.com")
+        .insert_link("SnakeMD", "https://www.snakemd.io")
     return readme
 
 
