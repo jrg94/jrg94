@@ -1,57 +1,63 @@
 # Welcome to My Profile!
 
-This week's code snippet, Rot13 in Dart, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Roman Numeral in C, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Dart
-import 'dart:io';
+```C
+#include  <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-main(List<String> args) {
-  if (args.isEmpty || args[0].isEmpty) {
-    print("Usage: please provide a string to encrypt");
-    exit(1);
-  } else {
-    print( rot13(args[0]) );
-  }
-}
+int val[150];
 
-String rot13(String input) {
-  int aLower = "a".codeUnitAt(0);
-  int aUpper = "A".codeUnitAt(0);
-  int nLower = "n".codeUnitAt(0);
-  int nUpper = "N".codeUnitAt(0);
-  int zLower = "z".codeUnitAt(0);
-  int zUpper = "Z".codeUnitAt(0);
-
-  List<String> coded = [];
-
-  input.codeUnits.forEach((char) {
-    if ((char >= aLower && char < nLower) ||
-        (char >= aUpper && char < nUpper)) {
-      coded.add(new String.fromCharCode(char + 13));
-    } else if ((char >= nLower && char <= zLower) ||
-        (char >= nUpper && char <= zUpper)) {
-      coded.add(new String.fromCharCode(char - 13));
-    } else {
-      coded.add(new String.fromCharCode(char));
+int main(int argc,char **argv)
+{
+    if(argv[1]==NULL){
+        printf("Usage: please provide a string of roman numerals");
+        return 0;
     }
-  });
-
-  return coded.join();
+    if(strlen(argv[1])==0){
+        printf("0");
+        return 0;
+    }
+    
+    int len=strlen(argv[1]);
+    val['I']=1;
+    val['V']=5;
+    val['X']=10;
+    val['L']=50;
+    val['C']=100;
+    val['D']=500;
+    val['M']=1000;
+    long long ans=0;
+    
+    for(int i=1;i<len;++i){
+        if(!val[argv[1][i]]){
+            printf("Error: invalid string of roman numerals");
+            return 0;
+        }
+        if(val[argv[1][i]]>val[argv[1][i-1]])ans-=2*val[argv[1][i-1]];
+        ans+=val[argv[1][i]];
+    }
+    if(!val[argv[1][0]]){
+        printf("Error: invalid string of roman numerals");
+        return 0;
+    }
+    printf("%lld",ans+val[argv[1][0]]);
 }
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com).
 
-- :seedling: [Why Does == Sometimes Work on Strings in Java?](https://therenegadecoder.com/code/why-does-double-equals-sometimes-work-on-strings-in-java/)
-- :lock: [2022: Year in Review](https://therenegadecoder.com/meta/2022-year-in-review/)
-- :dango: [Reflecting on My 8th Semester of Teaching: Autumn 2022](https://therenegadecoder.com/blog/reflecting-on-my-8th-semester-of-teaching-autumn-2022/)
-- :gem: [There Has to Be a Better Way: Reflecting on My Automation Catchphrase](https://therenegadecoder.com/blog/there-has-to-be-a-better-way-reflecting-on-my-automation-catchphrase/)
-- :exclamation: [I Am a PhD Candidate!](https://therenegadecoder.com/blog/i-am-a-phd-candidate/)
-- :lock: [Where Do Foo, Bar, and Baz Come From in Programming?](https://therenegadecoder.com/blog/where-do-foo-bar-and-baz-come-from-in-programming/)
-- :lock: [How to Clamp a Floating Point Number in Python: Branching, Sorting, and More!](https://therenegadecoder.com/code/how-to-clamp-a-floating-point-number-in-python/)
-- :cat: [Master Chief Collection’s Halo 2 Co-op Campaign Is Unplayable: Here Are Some Tips](https://therenegadecoder.com/blog/master-chief-collections-halo-2-co-op-campaign-is-unplayable-here-are-some-tips/)
-- :lock: [How to Convert sqlite3 Rows into Python Objects](https://therenegadecoder.com/code/how-to-convert-sqlite3-rows-into-python-objects/)
-- :seedling: [5 Ways to Share Code in Discord](https://therenegadecoder.com/code/5-ways-to-share-code-in-discord/)
+- :gem: [Why Does == Sometimes Work on Strings in Java?](https://therenegadecoder.com/code/why-does-double-equals-sometimes-work-on-strings-in-java/)
+- :notes: [2022: Year in Review](https://therenegadecoder.com/meta/2022-year-in-review/)
+- :door: [Reflecting on My 8th Semester of Teaching: Autumn 2022](https://therenegadecoder.com/blog/reflecting-on-my-8th-semester-of-teaching-autumn-2022/)
+- :seedling: [There Has to Be a Better Way: Reflecting on My Automation Catchphrase](https://therenegadecoder.com/blog/there-has-to-be-a-better-way-reflecting-on-my-automation-catchphrase/)
+- :seedling: [I Am a PhD Candidate!](https://therenegadecoder.com/blog/i-am-a-phd-candidate/)
+- :seedling: [Where Do Foo, Bar, and Baz Come From in Programming?](https://therenegadecoder.com/blog/where-do-foo-bar-and-baz-come-from-in-programming/)
+- :fu: [How to Clamp a Floating Point Number in Python: Branching, Sorting, and More!](https://therenegadecoder.com/code/how-to-clamp-a-floating-point-number-in-python/)
+- :fu: [Master Chief Collection’s Halo 2 Co-op Campaign Is Unplayable: Here Are Some Tips](https://therenegadecoder.com/blog/master-chief-collections-halo-2-co-op-campaign-is-unplayable-here-are-some-tips/)
+- :exclamation: [How to Convert sqlite3 Rows into Python Objects](https://therenegadecoder.com/code/how-to-convert-sqlite3-rows-into-python-objects/)
+- :door: [5 Ways to Share Code in Discord](https://therenegadecoder.com/code/5-ways-to-share-code-in-discord/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -63,4 +69,4 @@ Also, here are some fun links you can use to support my work.
 
 ---
 
-This document was automatically rendered on 2023-01-27 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2023-02-03 using [SnakeMD](https://www.snakemd.io).
