@@ -1,22 +1,21 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Google Apps Script, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Racket, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Google Apps Script
-function helloWorld() {
-  Logger.log("Hello, World!");
-}
+```Racket
+#lang racket/base
+"Hello, World!"
 ```
 
-Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :milky_way:, teach: :apple:)
+Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
-- :milky_way: [The Renegade Coder Is Taking a Little Break](https://therenegadecoder.com/meta/the-renegade-coder-is-taking-a-little-break/)
+- :thought_balloon: [The Renegade Coder Is Taking a Little Break](https://therenegadecoder.com/meta/the-renegade-coder-is-taking-a-little-break/)
 - :computer: [Why Is Adding Two Random Numbers Not the Same as Generating One in the Same Range?](https://therenegadecoder.com/code/why-is-adding-two-random-numbers-not-the-same-as-generating-one-in-the-same-range/)
 - :computer: [Design by Contract Hinges on Implication](https://therenegadecoder.com/code/design-by-contract-hinges-on-implication/)
 - :computer: [Maybe It’s Not Okay to Test Private Methods—at Least When Using Design by Contract](https://therenegadecoder.com/code/maybe-its-not-okay-to-test-private-methods-at-least-when-using-design-by-contract/)
 - :black_nib: [29 Things I’d Only Say If I Were Kidnapped](https://therenegadecoder.com/blog/29-things-id-only-say-if-i-were-kidnapped/)
 - :computer: [Why Does == Sometimes Work on Strings in Java?](https://therenegadecoder.com/code/why-does-double-equals-sometimes-work-on-strings-in-java/)
-- :milky_way: [2022: Year in Review](https://therenegadecoder.com/meta/2022-year-in-review/)
+- :thought_balloon: [2022: Year in Review](https://therenegadecoder.com/meta/2022-year-in-review/)
 - :black_nib: [Reflecting on My 8th Semester of Teaching: Autumn 2022](https://therenegadecoder.com/blog/reflecting-on-my-8th-semester-of-teaching-autumn-2022/)
 - :black_nib: [There Has to Be a Better Way: Reflecting on My Automation Catchphrase](https://therenegadecoder.com/blog/there-has-to-be-a-better-way-reflecting-on-my-automation-catchphrase/)
 - :black_nib: [I Am a PhD Candidate!](https://therenegadecoder.com/blog/i-am-a-phd-candidate/)
