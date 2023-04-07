@@ -44,7 +44,7 @@ def get_code_snippet() -> subete.SampleProgram:
 
     :return: a sample program object
     """
-    logger.debug("Loading sample programs repo")        
+    logger.debug("Loading sample programs repo")
     code = repo.random_program()
     return code
 
@@ -62,11 +62,23 @@ def generate_readme(posts: list, code: subete.SampleProgram) -> Document:
     readme.add_paragraph(f"This week's code snippet, {code}, is brought to you by Subete and the Sample Programs repo.") \
         .insert_link("Subete", url="https://subete.jeremygrifski.com/en/latest/") \
         .insert_link("Sample Programs repo", url="https://sampleprograms.io/")
-    readme.add_code(code.code().encode("ascii", "ignore").decode("ascii").strip(), lang=code.language_name())
+    readme.add_code(
+        code.code().encode("ascii", "ignore").decode("ascii").strip(), 
+        lang=code.language_name()
+    )
     readme.add_paragraph("Below you'll find an up-to-date list of articles by me on The Renegade Coder.") \
         .insert_link("The Renegade Coder", "https://therenegadecoder.com")
-    readme.add_block(MDList([Paragraph([random.choice(emojis), " ", Inline(post.title, link=post.link)]) for post in posts]))
-    readme.add_paragraph("Also, here are some fun links you can use to support my work.")
+    readme.add_block(MDList([
+        Paragraph([
+            random.choice(emojis), 
+            " ", 
+            Inline(post.title, link=post.link)
+        ]) 
+        for post in posts]
+    ))
+    readme.add_paragraph(
+        "Also, here are some fun links you can use to support my work."
+    )
     readme.add_block(MDList([
         Inline("Patreon", link="https://www.patreon.com/TheRenegadeCoder"),
         Inline("Discord", link="https://discord.gg/Jhmtj7Z"),
