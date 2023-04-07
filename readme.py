@@ -50,6 +50,13 @@ def get_code_snippet() -> subete.SampleProgram:
 
 
 def generate_readme(posts: list, code: subete.SampleProgram) -> Document:
+    """
+    Generates the README document from a list of posts and a sample program.
+
+    :param posts: a list of posts
+    :param code: a code snippet
+    :return: a markdown document to be rendered
+    """
     readme = Document()
     readme.add_heading("Welcome to My Profile!")
     readme.add_paragraph(f"This week's code snippet, {code}, is brought to you by Subete and the Sample Programs repo.") \
