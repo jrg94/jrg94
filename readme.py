@@ -37,6 +37,12 @@ def get_code_snippet() -> subete.SampleProgram:
 
 
 def _get_emoji(page_link: str):
+    """
+    Gets an emoji that corresponds to the page category.
+
+    :param page_link: a link to categorized
+    :return: the appropriate emoji
+    """
     emojis = {
         "blog": ":black_nib:",
         "code": ":computer:",
