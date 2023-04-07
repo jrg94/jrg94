@@ -8,19 +8,6 @@ from snakemd import Document, Inline, MDList, Paragraph
 
 repo = subete.load()
 logger = logging.getLogger(__name__)
-emojis = [
-    ":fu:",
-    ":exclamation:",
-    ":notes:",
-    ":cat:",
-    ":seedling:",
-    ":milky_way:",
-    ":lock:",
-    ":door:",
-    ":gem:",
-    ":tea:",
-    ":dango:"
-]
 
 
 def get_recent_posts() -> list:
@@ -49,6 +36,17 @@ def get_code_snippet() -> subete.SampleProgram:
     return code
 
 
+def _get_emoji(page_link: str):
+    emojis = {
+        "blog": ":black_nib:",
+        "code": ":computer:",
+        "meta": ":milky_way:",
+        "teach": ":apple:"
+    }
+    overlap = set(page_link.split("/")).intersection(emojis.keys())
+    return emojis[list(overlap)[0]]
+    
+
 def generate_readme(posts: list, code: subete.SampleProgram) -> Document:
     """
     Generates the README document from a list of posts and a sample program.
@@ -66,16 +64,21 @@ def generate_readme(posts: list, code: subete.SampleProgram) -> Document:
         code.code().encode("ascii", "ignore").decode("ascii").strip(),
         lang=code.language_name()
     )
-    readme.add_paragraph("Below you'll find an up-to-date list of articles by me on The Renegade Coder.") \
-        .insert_link("The Renegade Coder", "https://therenegadecoder.com")
+    readme.add_paragraph(
+        """
+        Below you'll find an up-to-date list of articles by me on The Renegade Coder.
+        For ease of browsing, emojis let you know the article category (i.e., blog: 
+        :black_nib:, code: :computer:, meta: :milky_way:, teach: :apple:)
+        """
+    ).insert_link("The Renegade Coder", "https://therenegadecoder.com")
     readme.add_block(MDList([
         Paragraph([
-            random.choice(emojis),
+            _get_emoji(post.link),
             " ",
             Inline(post.title, link=post.link)
         ])
-        for post in posts]
-    ))
+        for post in posts
+    ]))
     readme.add_paragraph(
         "Also, here are some fun links you can use to support my work."
     )
