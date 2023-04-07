@@ -46,7 +46,7 @@ def _get_emoji(page_link: str):
     emojis = {
         "blog": ":black_nib:",
         "code": ":computer:",
-        "meta": ":milky_way:",
+        "meta": ":thought_balloon:",
         "teach": ":apple:"
     }
     overlap = set(page_link.split("/")).intersection(emojis.keys())
@@ -74,7 +74,7 @@ def generate_readme(posts: list, code: subete.SampleProgram) -> Document:
         """
         Below you'll find an up-to-date list of articles by me on The Renegade Coder.
         For ease of browsing, emojis let you know the article category (i.e., blog: 
-        :black_nib:, code: :computer:, meta: :milky_way:, teach: :apple:)
+        :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
         """
     ).insert_link("The Renegade Coder", "https://therenegadecoder.com")
     readme.add_block(MDList([
