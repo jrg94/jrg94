@@ -63,17 +63,17 @@ def generate_readme(posts: list, code: subete.SampleProgram) -> Document:
         .insert_link("Subete", url="https://subete.jeremygrifski.com/en/latest/") \
         .insert_link("Sample Programs repo", url="https://sampleprograms.io/")
     readme.add_code(
-        code.code().encode("ascii", "ignore").decode("ascii").strip(), 
+        code.code().encode("ascii", "ignore").decode("ascii").strip(),
         lang=code.language_name()
     )
     readme.add_paragraph("Below you'll find an up-to-date list of articles by me on The Renegade Coder.") \
         .insert_link("The Renegade Coder", "https://therenegadecoder.com")
     readme.add_block(MDList([
         Paragraph([
-            random.choice(emojis), 
-            " ", 
+            random.choice(emojis),
+            " ",
             Inline(post.title, link=post.link)
-        ]) 
+        ])
         for post in posts]
     ))
     readme.add_paragraph(
