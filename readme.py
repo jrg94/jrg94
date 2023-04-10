@@ -1,5 +1,4 @@
 import logging
-import random
 from datetime import datetime
 
 import feedparser
@@ -64,8 +63,8 @@ def generate_readme(posts: list, code: subete.SampleProgram) -> Document:
     readme = Document()
     readme.add_heading("Welcome to My Profile!")
     readme.add_paragraph(f"This week's code snippet, {code}, is brought to you by Subete and the Sample Programs repo.") \
-        .insert_link("Subete", url="https://subete.jeremygrifski.com/en/latest/") \
-        .insert_link("Sample Programs repo", url="https://sampleprograms.io/")
+        .insert_link("Subete", "https://subete.jeremygrifski.com/en/latest/") \
+        .insert_link("Sample Programs repo", "https://sampleprograms.io/")
     readme.add_code(
         code.code().encode("ascii", "ignore").decode("ascii").strip(),
         lang=code.language_name()
