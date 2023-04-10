@@ -1,9 +1,9 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Spry, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Shen, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Spry
-echo "Hello, World!"
+```Shen
+(0-) (pr "Hello, World!")
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
@@ -29,4 +29,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2023-04-07 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2023-04-10 using [SnakeMD](https://www.snakemd.io).
