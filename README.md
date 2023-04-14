@@ -1,13 +1,14 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Shen, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Astro, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Shen
-(0-) (pr "Hello, World!")
+```Astro
+print "Hello World!"
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [How to Migrate to SnakeMD 2.0.0](https://therenegadecoder.com/code/how-to-migrate-to-snakemd-2-0-0/)
 - :thought_balloon: [The Renegade Coder Is Taking a Little Break](https://therenegadecoder.com/meta/the-renegade-coder-is-taking-a-little-break/)
 - :computer: [Why Is Adding Two Random Numbers Not the Same as Generating One in the Same Range?](https://therenegadecoder.com/code/why-is-adding-two-random-numbers-not-the-same-as-generating-one-in-the-same-range/)
 - :computer: [Design by Contract Hinges on Implication](https://therenegadecoder.com/code/design-by-contract-hinges-on-implication/)
@@ -17,7 +18,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :thought_balloon: [2022: Year in Review](https://therenegadecoder.com/meta/2022-year-in-review/)
 - :black_nib: [Reflecting on My 8th Semester of Teaching: Autumn 2022](https://therenegadecoder.com/blog/reflecting-on-my-8th-semester-of-teaching-autumn-2022/)
 - :black_nib: [There Has to Be a Better Way: Reflecting on My Automation Catchphrase](https://therenegadecoder.com/blog/there-has-to-be-a-better-way-reflecting-on-my-automation-catchphrase/)
-- :black_nib: [I Am a PhD Candidate!](https://therenegadecoder.com/blog/i-am-a-phd-candidate/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -29,4 +29,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2023-04-10 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2023-04-14 using [SnakeMD](https://www.snakemd.io).
