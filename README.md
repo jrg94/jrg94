@@ -1,13 +1,15 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Lily, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Gluon, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Lily
-"Hello, World!" |> print
+```Gluon
+let io = import! std.io
+io.print "Hello, World!"
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [How to Version Your Python Projects for Pip](https://therenegadecoder.com/code/how-to-version-your-python-projects-for-pip/)
 - :black_nib: [No One Uses Loop Invariants: Just Ask Google](https://therenegadecoder.com/blog/no-one-uses-loop-invariants-just-ask-google/)
 - :computer: [How to Migrate to SnakeMD 2.0.0](https://therenegadecoder.com/code/how-to-migrate-to-snakemd-2-0-0/)
 - :thought_balloon: [The Renegade Coder Is Taking a Little Break](https://therenegadecoder.com/meta/the-renegade-coder-is-taking-a-little-break/)
@@ -17,7 +19,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [29 Things I’d Only Say If I Were Kidnapped](https://therenegadecoder.com/blog/29-things-id-only-say-if-i-were-kidnapped/)
 - :computer: [Why Does == Sometimes Work on Strings in Java?](https://therenegadecoder.com/code/why-does-double-equals-sometimes-work-on-strings-in-java/)
 - :thought_balloon: [2022: Year in Review](https://therenegadecoder.com/meta/2022-year-in-review/)
-- :black_nib: [Reflecting on My 8th Semester of Teaching: Autumn 2022](https://therenegadecoder.com/blog/reflecting-on-my-8th-semester-of-teaching-autumn-2022/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -29,4 +30,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2023-04-21 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2023-04-28 using [SnakeMD](https://www.snakemd.io).
