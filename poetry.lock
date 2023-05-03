@@ -132,14 +132,14 @@ files = [
 
 [[package]]
 name = "subete"
-version = "0.15.1"
+version = "0.16.0"
 description = "The Sample Programs API in Python"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "subete-0.15.1-py3-none-any.whl", hash = "sha256:d836efeb829185309439ce9fdb4e462d87a5b472678bafd23da99230b07cd1f4"},
-    {file = "subete-0.15.1.tar.gz", hash = "sha256:a4b651765d20307138ef3e4c3e7db1b9d254fe7b93fe38f5c1973c46010305d9"},
+    {file = "subete-0.16.0-py3-none-any.whl", hash = "sha256:2b9d6149065f1e2dc3ef0b8e8e0c5d7e7dc0d8bb2eac9c20a94c211a6bdfffa7"},
+    {file = "subete-0.16.0.tar.gz", hash = "sha256:a4d8703040e2b3267827ae4c551ed5e8ec9dc596e34bdb9309d41fb229f93dbe"},
 ]
 
 [package.dependencies]
@@ -149,4 +149,4 @@ PyYAML = ">=5"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "b7ef7f4dde8da3b391bd76cc0e6be12adbb01a12e4a246aa144a945b93b41815"
+content-hash = "1eb23a874a88324b74a975490d12501e94823d1092aa4f1d6988f60f65df2597"

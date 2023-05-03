@@ -31,7 +31,7 @@ jobs:
         poetry-version: ${{ matrix.poetry-version }}
 
     - name: Generate README
-      run: poetry run readme.py
+      run: poetry run python readme.py
 
     - name: Commit wiki
       continue-on-error: true

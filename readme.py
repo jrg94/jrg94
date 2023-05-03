@@ -101,9 +101,13 @@ def generate_readme(posts: list, code: subete.SampleProgram) -> Document:
     return readme
 
 
-if __name__ == "__main__":
+def main():
     logging.basicConfig(level=logging.DEBUG)
     posts = get_recent_posts()
     code = get_code_snippet()
     readme = generate_readme(posts, code)
     readme.dump("README")
+
+
+if __name__ == "__main__":
+    main()    
