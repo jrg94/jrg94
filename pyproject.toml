@@ -1,0 +1,25 @@
+# Poetry settings
+[tool.poetry]
+name = "jrg94-readme"
+description = "The automation script for my README."
+version = "1.0.0"
+license = "MIT"
+
+authors = [
+    "Jeremy Grifski <jeremy.grifski@therenegadecoder.com>"
+]
+
+readme = "README.md"
+homepage = "https://jeremygrifski.com"
+repository = "https://github.com/jrg94/jrg94"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+snakemd = "^2.2.0b1"
+feedparser = "^6.0"
+subete = "^0.16"
+
+# Build system settings
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

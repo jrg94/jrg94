@@ -1,10 +1,58 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Gluon, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Palindromic Number in Perl, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Gluon
-let io = import! std.io
-io.print "Hello, World!"
+```Perl
+# accept an integer, reverse it, compare it with original
+# print true, if original and reversed number are same
+# print false, if original and reversed number are same
+#!/usr/bin/env perl
+use strict;
+use warnings;
+
+# no input
+usage() unless @ARGV == 1;
+
+# accept input as argument
+my ($number) = @ARGV;
+
+# if not provided, read from standard input
+if (!defined $number) {
+	$number = <STDIN>;
+	chomp $number;
+}
+
+if (!defined $number || $number !~ /^\d+$/ || $number < 0) {
+	usage();
+}
+
+my $temp = $number;
+my $noofdigits = 0;
+my $reversed_number = 0;
+while ($temp > 0){
+  $reversed_number = ($reversed_number * 10) + ($temp % 10);
+  $temp = int($temp / 10);
+  $noofdigits += 1;
+}
+
+if ($number < 0){
+  print("Usage: please input a non-negative integer")
+}
+
+else{
+  if ($reversed_number == $number){
+    print("true");
+    }
+  else{
+    print("false");
+  }
+
+}
+
+sub usage {
+	print "Usage: please input a non-negative integer";
+	exit;
+}
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
@@ -30,4 +78,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2023-04-28 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2023-05-02 using [SnakeMD](https://www.snakemd.io).

@@ -1,4 +1,0 @@
-snakemd>=2.0.0b2
-feedparser>=6.0
-subete>=0.15
-autopep8>=2.0
