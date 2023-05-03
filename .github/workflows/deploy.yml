@@ -7,26 +7,31 @@ on:
     - cron: '0 16 * * FRI'
 
 jobs:
-  build:
+  all:
 
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        python-version: ["3.11"]
+        poetry-version: ["1.4"]
+        os: ["ubuntu-latest"]
 
+    runs-on: ${{ matrix.os }}
     steps:
-    - name: Checkout repo 
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
       with:
-        submodules: recursive
-        
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v2
+        python-version: ${{ matrix.python-version }}
+
+    - name: Run Poetry Image
+      uses: abatilo/actions-poetry@v2
       with:
-        python-version: 3.9
-        
-    - name: Download required libraries
-      run: pip install -r requirements.txt
-        
+        poetry-version: ${{ matrix.poetry-version }}
+
     - name: Generate README
-      run: python readme.py
+      run: poetry run readme.py
 
     - name: Commit wiki
       continue-on-error: true
