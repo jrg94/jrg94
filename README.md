@@ -1,13 +1,18 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Autohotkey, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Purescript, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Autohotkey
-MsgBox, 0x30, Sample Programs, Hello, World!
+```Purescript
+module Main where
+
+import Effect.Console (log)
+
+main = log "Hello, world!"
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [Poetry Is The Best Way to Manage Your Python Projects](https://therenegadecoder.com/code/poetry-is-the-best-way-to-manage-your-python-projects/)
 - :black_nib: [Making a Sandwich is Not Rocket Science: How Elitists Always Stay on Top](https://therenegadecoder.com/blog/making-a-sandwich-is-not-rocket-science-how-elitists-always-stay-on-top/)
 - :computer: [How to Version Your Python Projects for Pip](https://therenegadecoder.com/code/how-to-version-your-python-projects-for-pip/)
 - :black_nib: [No One Uses Loop Invariants: Just Ask Google](https://therenegadecoder.com/blog/no-one-uses-loop-invariants-just-ask-google/)
@@ -17,7 +22,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :computer: [Design by Contract Hinges on Implication](https://therenegadecoder.com/code/design-by-contract-hinges-on-implication/)
 - :computer: [Maybe It’s Not Okay to Test Private Methods—at Least When Using Design by Contract](https://therenegadecoder.com/code/maybe-its-not-okay-to-test-private-methods-at-least-when-using-design-by-contract/)
 - :black_nib: [29 Things I’d Only Say If I Were Kidnapped](https://therenegadecoder.com/blog/29-things-id-only-say-if-i-were-kidnapped/)
-- :computer: [Why Does == Sometimes Work on Strings in Java?](https://therenegadecoder.com/code/why-does-double-equals-sometimes-work-on-strings-in-java/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -29,4 +33,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2023-05-05 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2023-05-12 using [SnakeMD](https://www.snakemd.io).
