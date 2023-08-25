@@ -1,13 +1,26 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Lobster, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Selection Sort in Matlab, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Lobster
-print "Hello, World!"
+```Matlab
+function sorted = selection_sort(array)
+  if nargin == 0 || length(array)<=1
+      fprintf("Usage: please provide a list of at least two integers to sort in the format [1 2 3 4 5]\n");
+      return
+  end  
+  
+  sorted = [];
+  while ~isempty(array)
+      x = min(array);
+      sorted = [ sorted array(array==x) ];
+      array(array==x) = [];  
+  end
+end
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [5 Beginner Tricks for Writing Your Own Unit Tests](https://therenegadecoder.com/code/beginner-tricks-for-writing-your-own-unit-tests/)
 - :thought_balloon: [Transition Madness: Becoming a Lecturer](https://therenegadecoder.com/meta/transition-madness-becoming-a-lecturer/)
 - :black_nib: [I Am Officially a Lecturer](https://therenegadecoder.com/blog/i-am-officially-a-lecturer/)
 - :black_nib: [CampusParc Has Got to Go](https://therenegadecoder.com/blog/campusparc-has-got-to-go/)
@@ -17,7 +30,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [What It Takes to Throw a Celebration of Life](https://therenegadecoder.com/blog/what-it-takes-to-throw-a-celebration-of-life/)
 - :black_nib: [Using Ethnography to Advocate for Student Needs in Computer Science Education](https://therenegadecoder.com/blog/using-ethnography-to-advocate-for-student-needs-in-computer-science-education/)
 - :computer: [3 Key Programming Best Practices for Beginners](https://therenegadecoder.com/code/programming-best-practices-for-beginners/)
-- :black_nib: [What Restoring a 20-Year-Old Deck Looks Like](https://therenegadecoder.com/blog/what-refreshing-a-20-year-old-deck-looks-like/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -29,4 +41,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2023-08-18 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2023-08-25 using [SnakeMD](https://www.snakemd.io).
