@@ -1,13 +1,15 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Wren, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Mirth, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Wren
-System.print("Hello, World!")
+```Mirth
+main : --
+main = "Hello world!" _prim_unsafe_print
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [Obfuscation Techniques: Shadowing Built-in Functions](https://therenegadecoder.com/code/obfuscation-techniques-shadowing-built-in-functions/)
 - :computer: [Obfuscation Techniques: Writing Malicious Comments](https://therenegadecoder.com/code/obfuscation-techniques-writing-malicious-comments/)
 - :computer: [Obfuscation Techniques: The Yoda Conditional](https://therenegadecoder.com/code/obfuscation-techniques-the-yoda-conditional/)
 - :apple: [Students Should Be Able to Build a Portfolio From Their Coursework](https://therenegadecoder.com/teach/students-should-be-able-to-build-a-portfolio-from-their-coursework/)
@@ -17,7 +19,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [The Two-Layer Approach to Software Design](https://therenegadecoder.com/blog/the-two-layer-approach-to-software-design/)
 - :black_nib: [The World Is Built on Abstractions](https://therenegadecoder.com/blog/the-world-is-built-on-abstractions/)
 - :computer: [5 Beginner Tricks for Writing Your Own Unit Tests](https://therenegadecoder.com/code/beginner-tricks-for-writing-your-own-unit-tests/)
-- :thought_balloon: [Transition Madness: Becoming a Lecturer](https://therenegadecoder.com/meta/transition-madness-becoming-a-lecturer/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -29,4 +30,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2023-10-20 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2023-10-27 using [SnakeMD](https://www.snakemd.io).
