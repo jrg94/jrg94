@@ -1,13 +1,14 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Ti Basic, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Gosu, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Ti Basic
-Disp "Hello, World!"
+```Gosu
+print("Hello, World!")
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [How to Plot Semesters Using Pandas and Plotly](https://therenegadecoder.com/code/how-to-plot-semesters-using-pandas-and-plotly/)
 - :apple: [Reflecting on Two More Semesters of Teaching: Spring & Autumn 2023](https://therenegadecoder.com/teach/reflecting-on-two-more-semesters-of-teaching-spring-autumn-2023/)
 - :black_nib: [Grade Inflation Is Bullshit](https://therenegadecoder.com/blog/grade-inflation-is-bullshit/)
 - :computer: [Brainstorming An Algorithm for Shuffling a Queue of Songs](https://therenegadecoder.com/code/brainstorming-an-algorithm-for-shuffling-a-queue-of-songs/)
@@ -17,7 +18,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :computer: [Obfuscation Techniques: No More Type Hints](https://therenegadecoder.com/code/obfuscation-techniques-no-more-type-hints/)
 - :computer: [Obfuscation Techniques: Visually Similar Characters](https://therenegadecoder.com/code/obfuscation-techniques-visually-similar-characters/)
 - :computer: [Obfuscation Techniques: Shadowing Built-in Functions](https://therenegadecoder.com/code/obfuscation-techniques-shadowing-built-in-functions/)
-- :computer: [Obfuscation Techniques: Writing Malicious Comments](https://therenegadecoder.com/code/obfuscation-techniques-writing-malicious-comments/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -29,4 +29,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2023-12-22 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2023-12-29 using [SnakeMD](https://www.snakemd.io).
