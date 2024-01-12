@@ -1,20 +1,63 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in C2, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Selection Sort in Julia, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```C2
-module hello_world;
+```Julia
+#!/usr/bin/julia
 
-import stdio as io;
+function SelectionSort(arr)
+    l = length(arr)
+    sorted_list = []
+    for i = 1:l
+        m = minimum(arr)
+        push!(sorted_list,m)
+        deleteat!(arr, findfirst(x->x==m,arr))
+    end
+    return sorted_list
+end
 
-public fn i32 main(i32 argc, char** argv) {
-    io.printf("Hello, World!\n");
-    return 0;
-}
+function error()
+    println("Usage: please provide a list of at least two integers to sort in the format \"1, 2, 3, 4, 5\"")
+end
+
+function HandleInput(inp)
+
+    a = split(inp,",")
+    a = map(x->split(x," "),a)
+    a = map(x->last(x),a)
+    numbers = map(x->parse(Int,x),a)
+    if length(numbers) == 1
+        error()
+        exit()
+    end
+    return numbers
+    
+end
+
+function PrintOutput(out)
+    for i = 1:length(out)
+        print(out[i])
+        if i != length(out)
+            print(", ")
+        end
+    end
+    println()
+end
+
+try
+
+    n = HandleInput(ARGS[1])
+    sorted = SelectionSort(n)
+    PrintOutput(sorted)
+
+catch e
+    error()
+end
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [Migrating From Eclipse to VS Code: The Many Hurdles](https://therenegadecoder.com/code/migrating-from-eclipse-to-vs-code-the-many-hurdles/)
 - :black_nib: [2023: Year in Review](https://therenegadecoder.com/blog/2023-year-in-review/)
 - :computer: [How to Plot Semesters Using Pandas and Plotly](https://therenegadecoder.com/code/how-to-plot-semesters-using-pandas-and-plotly/)
 - :apple: [Reflecting on Two More Semesters of Teaching: Spring & Autumn 2023](https://therenegadecoder.com/teach/reflecting-on-two-more-semesters-of-teaching-spring-autumn-2023/)
@@ -24,7 +67,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :computer: [The Difference Between str() and repr() in Python: A Design by Contract Perspective](https://therenegadecoder.com/code/the-difference-between-str-and-repr-in-python-a-design-by-contract-perspective/)
 - :computer: [Obfuscation Techniques: Magic Numbers](https://therenegadecoder.com/code/obfuscation-techniques-magic-numbers/)
 - :computer: [Obfuscation Techniques: No More Type Hints](https://therenegadecoder.com/code/obfuscation-techniques-no-more-type-hints/)
-- :computer: [Obfuscation Techniques: Visually Similar Characters](https://therenegadecoder.com/code/obfuscation-techniques-visually-similar-characters/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -36,4 +78,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-01-05 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-01-12 using [SnakeMD](https://www.snakemd.io).
