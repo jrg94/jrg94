@@ -1,18 +1,38 @@
 # Welcome to My Profile!
 
-This week's code snippet, Reverse String in Scheme, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Reverse String in C, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Scheme
-(define (reverse-string x)
-  (list->string (reverse (string->list x))))
+```C
+#include <stdio.h>
+#include <string.h>
 
-(if (> (length (command-line)) 1)
-  (display (reverse-string (list-ref (command-line) 1)))
-)
+int main(int argc, char **argv)
+{
+    char *text = "";
+    size_t textlen;
+
+    /* get text from command line and calculate length */
+    if (argc >= 2) {
+        text = argv[1];
+    }
+
+    textlen = strlen(text);
+
+    /* print characters in reverse */
+    while (textlen-- > 0) {
+        putchar(text[textlen]);
+    }
+
+    /* put a newline at the end */
+    putchar('\n');
+
+    return 0;
+}
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [What Do People Mean When They Say “From Scratch”?](https://therenegadecoder.com/blog/what-do-people-mean-when-they-say-from-scratch/)
 - :black_nib: [What Is Going On With Cloud Storage for Photos?](https://therenegadecoder.com/blog/what-is-going-on-with-cloud-storage-for-photos/)
 - :computer: [Migrating From Eclipse to VS Code: The Many Hurdles](https://therenegadecoder.com/code/migrating-from-eclipse-to-vs-code-the-many-hurdles/)
 - :black_nib: [2023: Year in Review](https://therenegadecoder.com/blog/2023-year-in-review/)
@@ -22,7 +42,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :computer: [Brainstorming An Algorithm for Shuffling a Queue of Songs](https://therenegadecoder.com/code/brainstorming-an-algorithm-for-shuffling-a-queue-of-songs/)
 - :computer: [Trust Me! Your Code Isn’t That Bad](https://therenegadecoder.com/code/trust-me-your-code-isnt-that-bad/)
 - :computer: [The Difference Between str() and repr() in Python: A Design by Contract Perspective](https://therenegadecoder.com/code/the-difference-between-str-and-repr-in-python-a-design-by-contract-perspective/)
-- :computer: [Obfuscation Techniques: Magic Numbers](https://therenegadecoder.com/code/obfuscation-techniques-magic-numbers/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -34,4 +53,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-01-19 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-01-26 using [SnakeMD](https://www.snakemd.io).
