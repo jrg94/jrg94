@@ -1,15 +1,16 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Red, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Gravity, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Red
-Red [Title: "Hello World in Red"]
-
-print "Hello, World!"
+```Gravity
+func main() {
+  System.print("Hello, World!");
+}
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [Why I’m a Certified AI Hater](https://therenegadecoder.com/blog/why-im-a-certified-ai-hater/)
 - :computer: [Explain Like I’m Five: Context-Free Grammars](https://therenegadecoder.com/code/explain-like-im-five-context-free-grammars/)
 - :black_nib: [The Haters Guide to Python](https://therenegadecoder.com/blog/the-haters-guide-to-python/)
 - :black_nib: [America Is Not Ready for the Metric System](https://therenegadecoder.com/blog/america-is-not-ready-for-the-metric-system/)
@@ -19,7 +20,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [What Is Going On With Cloud Storage for Photos?](https://therenegadecoder.com/blog/what-is-going-on-with-cloud-storage-for-photos/)
 - :computer: [Migrating From Eclipse to VS Code: The Many Hurdles](https://therenegadecoder.com/code/migrating-from-eclipse-to-vs-code-the-many-hurdles/)
 - :black_nib: [2023: Year in Review](https://therenegadecoder.com/blog/2023-year-in-review/)
-- :computer: [How to Plot Semesters Using Pandas and Plotly](https://therenegadecoder.com/code/how-to-plot-semesters-using-pandas-and-plotly/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -31,4 +31,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-03-01 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-03-08 using [SnakeMD](https://www.snakemd.io).
