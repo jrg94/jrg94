@@ -1,15 +1,19 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Gravity, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Mirth, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Gravity
-func main() {
-  System.print("Hello, World!");
-}
+```Mirth
+module(hello-world)
+import(prelude)
+import(platform.posix)
+
+target-c99("hello-world.c",
+    "Hello, World!" str-print-ln!)
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [The Never-ending List of Small Programming Project Ideas](https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/)
 - :black_nib: [Why I’m a Certified AI Hater](https://therenegadecoder.com/blog/why-im-a-certified-ai-hater/)
 - :computer: [Explain Like I’m Five: Context-Free Grammars](https://therenegadecoder.com/code/explain-like-im-five-context-free-grammars/)
 - :black_nib: [The Haters Guide to Python](https://therenegadecoder.com/blog/the-haters-guide-to-python/)
@@ -19,7 +23,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [What Do People Mean When They Say “From Scratch”?](https://therenegadecoder.com/blog/what-do-people-mean-when-they-say-from-scratch/)
 - :black_nib: [What Is Going On With Cloud Storage for Photos?](https://therenegadecoder.com/blog/what-is-going-on-with-cloud-storage-for-photos/)
 - :computer: [Migrating From Eclipse to VS Code: The Many Hurdles](https://therenegadecoder.com/code/migrating-from-eclipse-to-vs-code-the-many-hurdles/)
-- :black_nib: [2023: Year in Review](https://therenegadecoder.com/blog/2023-year-in-review/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -31,4 +34,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-03-08 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-03-15 using [SnakeMD](https://www.snakemd.io).
