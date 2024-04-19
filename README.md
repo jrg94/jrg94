@@ -1,13 +1,14 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Fennel, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Fetlang, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Fennel
-(print "Hello, World!")
+```Fetlang
+make slave scream "Hello, World!"
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :apple: [It’s Time We Talk About Student Evaluations of Teaching](https://therenegadecoder.com/teach/its-time-we-talk-about-student-evaluations-of-teaching/)
 - :computer: [3 Nasty Bugs in Software Development](https://therenegadecoder.com/code/nasty-bugs-in-software-development/)
 - :computer: [Modeling a Simple Relational Database Using CSVs and Python](https://therenegadecoder.com/code/modeling-a-simple-relational-database-using-csvs-and-python/)
 - :black_nib: [Yet Another Instance of Misogyny in the Tech Field](https://therenegadecoder.com/blog/yet-another-instance-of-misogyny-in-the-tech-field/)
@@ -17,7 +18,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :computer: [Explain Like I’m Five: Context-Free Grammars](https://therenegadecoder.com/code/explain-like-im-five-context-free-grammars/)
 - :black_nib: [The Haters Guide to Python](https://therenegadecoder.com/blog/the-haters-guide-to-python/)
 - :black_nib: [America Is Not Ready for the Metric System](https://therenegadecoder.com/blog/america-is-not-ready-for-the-metric-system/)
-- :black_nib: [30 Best Video Games Over the Last 30 Years](https://therenegadecoder.com/blog/30-best-video-games-over-the-last-30-years/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -29,4 +29,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-04-12 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-04-19 using [SnakeMD](https://www.snakemd.io).
