@@ -1,14 +1,15 @@
 # Welcome to My Profile!
 
-This week's code snippet, Quine in Dg, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Ferret, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Dg
-s = 's = %r\nprint $ s%%s'
-print $ s%s
+```Ferret
+(do
+  (println "Hello, World!"))
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :apple: [College Students Will Sometimes Have a Lapse in Judgement](https://therenegadecoder.com/teach/college-students-will-sometimes-have-a-lapse-in-judgement/)
 - :apple: [We Have to End Our Cultural Obsession With Grades](https://therenegadecoder.com/teach/we-have-to-end-our-cultural-obsession-with-grades/)
 - :computer: [How to Automatically Calculate Letter Grades, But Every Solution Is Bad](https://therenegadecoder.com/code/how-to-automatically-calculate-letter-grades-but-every-solution-is-bad/)
 - :apple: [It’s Time We Talk About Student Evaluations of Teaching](https://therenegadecoder.com/teach/its-time-we-talk-about-student-evaluations-of-teaching/)
@@ -18,7 +19,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :apple: [Top Reasons Why You Don’t Need to Take Attendance (And Why I Do It Anyway)](https://therenegadecoder.com/teach/top-reasons-why-you-dont-need-to-take-attendance-and-why-i-do-it-anyway/)
 - :computer: [The Never-ending List of Small Programming Project Ideas](https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/)
 - :black_nib: [Why I’m a Certified AI Hater](https://therenegadecoder.com/blog/why-im-a-certified-ai-hater/)
-- :computer: [Explain Like I’m Five: Context-Free Grammars](https://therenegadecoder.com/code/explain-like-im-five-context-free-grammars/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -30,4 +30,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-05-03 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-05-10 using [SnakeMD](https://www.snakemd.io).
