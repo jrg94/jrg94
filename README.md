@@ -1,20 +1,24 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Opa, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Reverse String in Dg, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Opa
-function page() {
-	<pre>Hello, World!</pre>
-}
+```Dg
+import "/sys/argv"
 
-Server.start(
-	Server.http,
-	{~page, title: "SPEPL"}
-)
+snd_if_exists = xs -> if
+    (len xs) > 1 => snd xs
+    otherwise    => ""
+
+reverse = s -> if
+    len s     => last s + (init s |> reverse)
+    otherwise => ""
+
+print $ reverse <| snd_if_exists argv
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [What Is Iterable Unpacking in Python?](https://therenegadecoder.com/code/what-is-iterable-unpacking-in-python/)
 - :computer: [What Is an Iterable in Python?](https://therenegadecoder.com/code/what-is-an-iterable-in-python/)
 - :black_nib: [Meritocracy: The Facade That Determines Who Deserves Success](https://therenegadecoder.com/blog/meritocracy-the-facade-that-determines-who-deserves-success/)
 - :apple: [6 Tips for New College and University Educators](https://therenegadecoder.com/teach/6-tips-for-new-college-and-university-educators/)
@@ -24,7 +28,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :apple: [College Students Will Sometimes Have a Lapse in Judgement](https://therenegadecoder.com/teach/college-students-will-sometimes-have-a-lapse-in-judgement/)
 - :apple: [We Have to End Our Cultural Obsession With Grades](https://therenegadecoder.com/teach/we-have-to-end-our-cultural-obsession-with-grades/)
 - :computer: [How to Automatically Calculate Letter Grades, But Every Solution Is Bad](https://therenegadecoder.com/code/how-to-automatically-calculate-letter-grades-but-every-solution-is-bad/)
-- :apple: [It’s Time We Talk About Student Evaluations of Teaching](https://therenegadecoder.com/teach/its-time-we-talk-about-student-evaluations-of-teaching/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -36,4 +39,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-06-21 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-06-28 using [SnakeMD](https://www.snakemd.io).
