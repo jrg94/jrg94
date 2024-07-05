@@ -1,23 +1,17 @@
 # Welcome to My Profile!
 
-This week's code snippet, Reverse String in Dg, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Befunge, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Dg
-import "/sys/argv"
-
-snd_if_exists = xs -> if
-    (len xs) > 1 => snd xs
-    otherwise    => ""
-
-reverse = s -> if
-    len s     => last s + (init s |> reverse)
-    otherwise => ""
-
-print $ reverse <| snd_if_exists argv
+```Befunge
+0"!dlroW ,olleH"v    
+                > , v
+                | : <
+                @
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [What Are Special Methods in Python?](https://therenegadecoder.com/code/what-are-special-methods-in-python/)
 - :computer: [What Is Iterable Unpacking in Python?](https://therenegadecoder.com/code/what-is-iterable-unpacking-in-python/)
 - :computer: [What Is an Iterable in Python?](https://therenegadecoder.com/code/what-is-an-iterable-in-python/)
 - :black_nib: [Meritocracy: The Facade That Determines Who Deserves Success](https://therenegadecoder.com/blog/meritocracy-the-facade-that-determines-who-deserves-success/)
@@ -27,7 +21,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :apple: [The Problem With Assessing Instructor Difficulty](https://therenegadecoder.com/teach/the-problem-with-assessing-instructor-difficulty/)
 - :apple: [College Students Will Sometimes Have a Lapse in Judgement](https://therenegadecoder.com/teach/college-students-will-sometimes-have-a-lapse-in-judgement/)
 - :apple: [We Have to End Our Cultural Obsession With Grades](https://therenegadecoder.com/teach/we-have-to-end-our-cultural-obsession-with-grades/)
-- :computer: [How to Automatically Calculate Letter Grades, But Every Solution Is Bad](https://therenegadecoder.com/code/how-to-automatically-calculate-letter-grades-but-every-solution-is-bad/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -39,4 +32,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-06-28 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-07-05 using [SnakeMD](https://www.snakemd.io).
