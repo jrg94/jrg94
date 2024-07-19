@@ -1,14 +1,14 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Batch, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Felix, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Batch
-@echo off
-echo Hello, World!
+```Felix
+println$ "Hello, World!";
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [The Name 100 Women Challenge](https://therenegadecoder.com/blog/the-name-100-women-challenge/)
 - :black_nib: [All But Dissertation: The Light at the End of the Tunnel](https://therenegadecoder.com/blog/all-but-dissertation-the-light-at-the-end-of-the-tunnel/)
 - :computer: [What Are Special Methods in Python?](https://therenegadecoder.com/code/what-are-special-methods-in-python/)
 - :computer: [What Is Iterable Unpacking in Python?](https://therenegadecoder.com/code/what-is-iterable-unpacking-in-python/)
@@ -18,7 +18,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [Checking Up on Google Search in 2024: It’s Worse Somehow](https://therenegadecoder.com/blog/checking-up-on-google-search-in-2024-its-worse-somehow/)
 - :black_nib: [Google Threatens to Ruin Search as We Know It](https://therenegadecoder.com/blog/google-threatens-to-ruin-search-as-we-know-it/)
 - :apple: [The Problem With Assessing Instructor Difficulty](https://therenegadecoder.com/teach/the-problem-with-assessing-instructor-difficulty/)
-- :apple: [College Students Will Sometimes Have a Lapse in Judgement](https://therenegadecoder.com/teach/college-students-will-sometimes-have-a-lapse-in-judgement/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -30,4 +29,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-07-12 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-07-19 using [SnakeMD](https://www.snakemd.io).
