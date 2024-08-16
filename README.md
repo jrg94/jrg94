@@ -1,13 +1,17 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Arkscript, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Dale, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Arkscript
-(print "Hello, World!")
+```Dale
+(import cstdio)
+
+(def main (fn extern-c int (void)
+    (printf "Hello, World!\n")))
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [What Is a Condition in Python?](https://therenegadecoder.com/code/what-is-a-condition-in-python/)
 - :computer: [What Is a Loop in Python?](https://therenegadecoder.com/code/what-is-a-loop-in-python/)
 - :computer: [What Is a Constructor in Python?](https://therenegadecoder.com/code/what-is-a-constructor-in-python/)
 - :computer: [What Is Snake Case in Python?](https://therenegadecoder.com/code/what-is-snake-case-in-python/)
@@ -17,7 +21,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :computer: [What Is Iterable Unpacking in Python?](https://therenegadecoder.com/code/what-is-iterable-unpacking-in-python/)
 - :computer: [What Is an Iterable in Python?](https://therenegadecoder.com/code/what-is-an-iterable-in-python/)
 - :black_nib: [Meritocracy: The Facade That Determines Who Deserves Success](https://therenegadecoder.com/blog/meritocracy-the-facade-that-determines-who-deserves-success/)
-- :apple: [6 Tips for New College and University Educators](https://therenegadecoder.com/teach/6-tips-for-new-college-and-university-educators/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -29,4 +32,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-08-09 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-08-16 using [SnakeMD](https://www.snakemd.io).
