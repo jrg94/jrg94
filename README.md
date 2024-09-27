@@ -1,19 +1,17 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Discus, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Idris, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Discus
+```Idris
 module Main
-import System.IO.Console
 
-where
-
-main ()
- = do   writel "Hello, World!"
+main : IO ()
+main = putStrLn "Hello, World!"
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [What Is Operator Overloading in Python?](https://therenegadecoder.com/code/what-is-operator-overloading-in-python/)
 - :computer: [What Is the Assignment Operator in Python?](https://therenegadecoder.com/code/what-is-the-assignment-operator-in-python/)
 - :apple: [As a Student, You Are a Lab Rat](https://therenegadecoder.com/teach/as-a-student-you-are-a-lab-rat/)
 - :computer: [What Is an Expression in Python?](https://therenegadecoder.com/code/what-is-an-expression-in-python/)
@@ -23,7 +21,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :computer: [What Is a Loop in Python?](https://therenegadecoder.com/code/what-is-a-loop-in-python/)
 - :computer: [What Is a Constructor in Python?](https://therenegadecoder.com/code/what-is-a-constructor-in-python/)
 - :computer: [What Is Snake Case in Python?](https://therenegadecoder.com/code/what-is-snake-case-in-python/)
-- :black_nib: [The Name 100 Women Challenge](https://therenegadecoder.com/blog/the-name-100-women-challenge/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -35,4 +32,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-09-20 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-09-27 using [SnakeMD](https://www.snakemd.io).
