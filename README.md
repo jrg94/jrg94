@@ -1,16 +1,17 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Dale, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Baklava in Wren, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Dale
-(import cstdio)
-
-(def main (fn extern-c int (void)
-    (printf "Hello, World!\n")))
+```Wren
+for (i in (-10..10)) {
+  var numSpaces = (i >= 0) ? i : -i
+  System.print(" " * numSpaces + "*" * (21 - 2 *numSpaces))
+}
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [Unpacking the Jargon Around Compilers, Interpreters, and More](https://therenegadecoder.com/code/unpacking-the-jargon-around-compilers-interpreters-and-more/)
 - :computer: [What Are Type Hints in Python?](https://therenegadecoder.com/code/what-are-type-hints-in-python/)
 - :computer: [The Problem Enums Are Intended to Solve](https://therenegadecoder.com/code/the-problem-enums-are-intended-to-solve/)
 - :computer: [What Is Unit Testing in Python?](https://therenegadecoder.com/code/what-is-unit-testing-in-python/)
@@ -20,7 +21,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :apple: [As a Student, You Are a Lab Rat](https://therenegadecoder.com/teach/as-a-student-you-are-a-lab-rat/)
 - :computer: [What Is an Expression in Python?](https://therenegadecoder.com/code/what-is-an-expression-in-python/)
 - :computer: [What Is a Variable in Python?](https://therenegadecoder.com/code/what-is-a-variable-in-python/)
-- :black_nib: [A Preview of My Last Semester As a PhD Student](https://therenegadecoder.com/blog/a-preview-of-my-last-semester-as-a-phd-student/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -32,4 +32,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-10-25 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-11-01 using [SnakeMD](https://www.snakemd.io).
