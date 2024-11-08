@@ -1,16 +1,42 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in Wren, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Whitespace, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Wren
-for (i in (-10..10)) {
-  var numSpaces = (i >= 0) ? i : -i
-  System.print(" " * numSpaces + "*" * (21 - 2 *numSpaces))
-}
+```Whitespace
+S S S T	S S T	S S S L
+T	L
+S S S S S T	T	S S T	S T	L
+T	L
+S S S S S T	T	S T	T	S S L
+T	L
+S S S S S T	T	S T	T	S S L
+T	L
+S S S S S T	T	S T	T	T	T	L
+T	L
+S S S S S T	S T	T	S S L
+T	L
+S S S S S T	S S S S S L
+T	L
+S S S S S T	S T	S T	T	T	L
+T	L
+S S S S S T	T	S T	T	T	T	L
+T	L
+S S S S S T	T	T	S S T	S L
+T	L
+S S S S S T	T	S T	T	S S L
+T	L
+S S S S S T	T	S S T	S S L
+T	L
+S S S S S T	S S S S T	L
+T	L
+S S L
+L
+L
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [Looking Forward to the Future](https://therenegadecoder.com/blog/looking-forward-to-the-future/)
 - :computer: [Unpacking the Jargon Around Compilers, Interpreters, and More](https://therenegadecoder.com/code/unpacking-the-jargon-around-compilers-interpreters-and-more/)
 - :computer: [What Are Type Hints in Python?](https://therenegadecoder.com/code/what-are-type-hints-in-python/)
 - :computer: [The Problem Enums Are Intended to Solve](https://therenegadecoder.com/code/the-problem-enums-are-intended-to-solve/)
@@ -20,7 +46,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :computer: [What Is the Assignment Operator in Python?](https://therenegadecoder.com/code/what-is-the-assignment-operator-in-python/)
 - :apple: [As a Student, You Are a Lab Rat](https://therenegadecoder.com/teach/as-a-student-you-are-a-lab-rat/)
 - :computer: [What Is an Expression in Python?](https://therenegadecoder.com/code/what-is-an-expression-in-python/)
-- :computer: [What Is a Variable in Python?](https://therenegadecoder.com/code/what-is-a-variable-in-python/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -32,4 +57,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-11-01 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-11-08 using [SnakeMD](https://www.snakemd.io).
