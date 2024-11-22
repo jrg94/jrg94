@@ -1,29 +1,14 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in V, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Elvish, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```V
-module main
-
-fn str_repeat(n int, s string) string {
-    mut result := ""
-    for _ in 0 .. n {
-        result += s
-    }
-
-    return result
-}
-
-fn main() {
-    for i in -10 .. 11 {
-        num_spaces := if i >= 0 { i } else { -i }
-        println(str_repeat(num_spaces, " ") + str_repeat(21 - 2 *num_spaces, "*"))
-    }
-}
+```Elvish
+echo "Hello, World!"
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [I Successfully Completed My PhD in Engineering Education](https://therenegadecoder.com/blog/i-successfully-completed-my-phd-in-engineering-education/)
 - :apple: [So You Want to Be a University Educator](https://therenegadecoder.com/teach/so-you-want-to-be-a-university-educator/)
 - :black_nib: [Looking Forward to the Future](https://therenegadecoder.com/blog/looking-forward-to-the-future/)
 - :computer: [Unpacking the Jargon Around Compilers, Interpreters, and More](https://therenegadecoder.com/code/unpacking-the-jargon-around-compilers-interpreters-and-more/)
@@ -33,7 +18,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :computer: [What Is a Function in Python?](https://therenegadecoder.com/code/what-is-a-function-in-python/)
 - :computer: [What Is Operator Overloading in Python?](https://therenegadecoder.com/code/what-is-operator-overloading-in-python/)
 - :computer: [What Is the Assignment Operator in Python?](https://therenegadecoder.com/code/what-is-the-assignment-operator-in-python/)
-- :apple: [As a Student, You Are a Lab Rat](https://therenegadecoder.com/teach/as-a-student-you-are-a-lab-rat/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -45,4 +29,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-11-15 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-11-22 using [SnakeMD](https://www.snakemd.io).
