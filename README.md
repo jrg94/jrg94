@@ -1,13 +1,14 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Grain, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Bracmat, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Grain
-print('Hello, World!')
+```Bracmat
+put$"Hello, World!"
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [Workshopping a Tier List Generator](https://therenegadecoder.com/code/workshopping-a-tier-list-generator/)
 - :black_nib: [No, The GRE Should Not Be Reinstated](https://therenegadecoder.com/blog/no-the-gre-should-not-be-reinstated/)
 - :black_nib: [Summarizing My Dissertation for the Layman](https://therenegadecoder.com/blog/summarizing-my-dissertation-for-the-layman/)
 - :black_nib: [9 Things I Wish I Knew About Doctoral Programs](https://therenegadecoder.com/blog/things-i-wish-i-knew-about-doctoral-programs/)
@@ -17,7 +18,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :computer: [Unpacking the Jargon Around Compilers, Interpreters, and More](https://therenegadecoder.com/code/unpacking-the-jargon-around-compilers-interpreters-and-more/)
 - :computer: [What Are Type Hints in Python?](https://therenegadecoder.com/code/what-are-type-hints-in-python/)
 - :computer: [The Problem Enums Are Intended to Solve](https://therenegadecoder.com/code/the-problem-enums-are-intended-to-solve/)
-- :computer: [What Is Unit Testing in Python?](https://therenegadecoder.com/code/what-is-unit-testing-in-python/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -29,4 +29,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-12-13 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-12-20 using [SnakeMD](https://www.snakemd.io).
