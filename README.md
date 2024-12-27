@@ -1,9 +1,63 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Bracmat, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Merge Sort in Javascript, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Bracmat
-put$"Hello, World!"
+```Javascript
+function mergeSort (unsortedArray) {
+  if (unsortedArray.length <= 1) {
+    return unsortedArray;
+  }
+  const middle = Math.floor(unsortedArray.length / 2);
+  const left = unsortedArray.slice(0, middle);
+  const right = unsortedArray.slice(middle);
+  return merge(
+    mergeSort(left), mergeSort(right)
+  );
+}
+
+function merge (left, right) {
+  let resultArray = [], leftIndex = 0, rightIndex = 0;
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      resultArray.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      resultArray.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+  return resultArray
+          .concat(left.slice(leftIndex))
+          .concat(right.slice(rightIndex));
+}
+
+const main = (input) => {
+    const inputValidation = /^"?(\d+,\s*){2,}\d+(,"?|"?)$/gm;
+    if (inputValidation.test(input) == true) {
+        let arr;
+        arr = input.replace(/(\s|"|'|`)/g, '');
+        arr = arr.split(',');
+        arr = arr.map(function (n) {
+            return parseInt(n, 10);
+        });
+        arr = arr.filter(n => n);
+        arr=mergeSort(arr);
+        console.log(arr);
+    }
+    else {
+        console.log(usage);
+    }
+}
+
+const usage = `Usage: please provide a list of at least two integers to sort in the format "1, 2, 3, 4, 5"`;
+
+if (process.argv.length > 2) {
+    const input = process.argv[2];
+    main(input);
+}
+else {
+    console.log(usage);
+}
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
@@ -29,4 +83,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2024-12-20 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2024-12-27 using [SnakeMD](https://www.snakemd.io).
