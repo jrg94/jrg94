@@ -1,25 +1,18 @@
 # Welcome to My Profile!
 
-This week's code snippet, Even Odd in Php, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Cyclone, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Php
-<?php
-
-if ($argc < 2 || !is_numeric($argv[1])) {
-    die("Usage: please input a number\n");
-}
-
-$input = abs($argv[1]);
-
-if ($input % 2 == 0) {
-    echo "Even\n";
-} elseif ($input % 2 == 1) {
-    echo "Odd\n";
+```Cyclone
+#include <stdio.h>
+int main() {
+	puts("Hello, World!");
+	return 0;
 }
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :apple: [You Should Give Open-Ended Projects to Your Students](https://therenegadecoder.com/teach/you-should-give-open-ended-projects-to-your-students/)
 - :computer: [How to Move Your Extensions Folder in VS Code](https://therenegadecoder.com/code/how-to-move-your-extensions-folder-in-vs-code/)
 - :thought_balloon: [Sample Programs Repo Celebrates 1,000 Code Snippets](https://therenegadecoder.com/meta/sample-programs-repo-celebrates-1000-code-snippets/)
 - :apple: [Canvas Is Not Built With Educators in Mind](https://therenegadecoder.com/teach/canvas-is-not-built-with-educators-in-mind/)
@@ -29,7 +22,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [9 Things I Wish I Knew About Doctoral Programs](https://therenegadecoder.com/blog/things-i-wish-i-knew-about-doctoral-programs/)
 - :black_nib: [I Successfully Completed My PhD in Engineering Education](https://therenegadecoder.com/blog/i-successfully-completed-my-phd-in-engineering-education/)
 - :apple: [So You Want to Be a University Educator](https://therenegadecoder.com/teach/so-you-want-to-be-a-university-educator/)
-- :black_nib: [Looking Forward to the Future](https://therenegadecoder.com/blog/looking-forward-to-the-future/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -41,4 +33,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-01-17 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-01-24 using [SnakeMD](https://www.snakemd.io).
