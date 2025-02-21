@@ -1,63 +1,37 @@
 # Welcome to My Profile!
 
-This week's code snippet, Longest Common Subsequence in Elixir, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Fizz Buzz in Prolog, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Elixir
-defmodule LongestCommonSubsequence do
-  def main() do
-    lcs = solve(System.argv())
-    IO.puts("#{lcs}")
-  end
+```Prolog
+% Portions of this solution were derived through the assistance of ChatGPT.
+:- initialization(main).
 
-  def solve([as, bs]) when is_bitstring(as) and is_bitstring(bs) do
-    lcs(parse_string_to_list_integer(as), parse_string_to_list_integer(bs)) |> Enum.join(", ")
-  end
+fizzbuzz(N) :-
+    fizzbuzz_helper(1, N).
 
-  def solve(_) do
-    print_usage()
-  end
+fizzbuzz_helper(X, N) :-
+    X > N, !.
+fizzbuzz_helper(X, N) :-
+    (X mod 15 =:= 0 ->
+        write('FizzBuzz'), nl
+    ; X mod 3 =:= 0 ->
+        write('Fizz'), nl
+    ; X mod 5 =:= 0 ->
+        write('Buzz'), nl
+    ;
+        write(X), nl
+    ),
+    X1 is X + 1,
+    fizzbuzz_helper(X1, N).
 
-  def print_usage() do
-    ~s(Usage: please provide two lists in the format "1, 2, 3, 4, 5")
-  end
-
-  def lcs([], _) do
-    []
-  end
-
-  def lcs(_, []) do
-    []
-  end
-
-  def lcs([a | as], [b | bs]) when a == b do
-    [a] ++ lcs(as, bs)
-  end
-
-  def lcs([a | as], [b | bs]) do
-    longest(lcs(as, [b | bs]), lcs([a | as], bs))
-  end
-
-  def longest(l1, l2) do
-    if Enum.count(l1) > Enum.count(l2) do
-      l1
-    else
-      l2
-    end
-  end
-
-  def parse_string_to_list_integer(xs) do
-    xs
-    |> String.trim()
-    |> String.split(",")
-    |> Enum.map(&String.to_integer(String.trim(&1)))
-  end
-end
-
-LongestCommonSubsequence.main()
+main() :-
+    fizzbuzz(100),
+    halt.
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :thought_balloon: [2024: Year in Review](https://therenegadecoder.com/meta/2024-year-in-review/)
 - :black_nib: [Is Anyone Else Bothered by How Quickly We Adopted Generative AI?](https://therenegadecoder.com/blog/is-anyone-else-bothered-by-how-quickly-we-adopted-generative-ai/)
 - :black_nib: [31 Lessons Learned as a New Dad](https://therenegadecoder.com/blog/31-lessons-learned-as-a-new-dad/)
 - :apple: [So You’re Not Sure If Computer Science Is for You](https://therenegadecoder.com/teach/so-youre-not-sure-if-computer-science-is-for-you/)
@@ -67,7 +41,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :apple: [Canvas Is Not Built With Educators in Mind](https://therenegadecoder.com/teach/canvas-is-not-built-with-educators-in-mind/)
 - :computer: [Workshopping a Tier List Generator](https://therenegadecoder.com/code/workshopping-a-tier-list-generator/)
 - :black_nib: [No, The GRE Should Not Be Reinstated](https://therenegadecoder.com/blog/no-the-gre-should-not-be-reinstated/)
-- :black_nib: [Summarizing My Dissertation for the Layman](https://therenegadecoder.com/blog/summarizing-my-dissertation-for-the-layman/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -79,4 +52,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-02-14 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-02-21 using [SnakeMD](https://www.snakemd.io).
