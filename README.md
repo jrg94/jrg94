@@ -1,124 +1,105 @@
 # Welcome to My Profile!
 
-This week's code snippet, Merge Sort in Objective C, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Capitalize in Brainfuck, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Objective C
-#import <Foundation/Foundation.h>
+```Brainfuck
+[
+    Source for division algorithm:
+    https://stackoverflow.com/questions/27905818/divmod-algorithm-in-brainfuck
 
-// Function to convert and validate the input string
-// Source: ChatGPT
-NSInteger convertAndValidateInput(NSString *inputString) {
-    NSScanner *scanner = [NSScanner scannerWithString:inputString];
-    NSInteger integerValue = 0;
-
-    // Check if the scanner successfully scanned an integer
-    if ([scanner scanInteger:&integerValue] && [scanner isAtEnd]) {
-        return integerValue;
-    } else {
-        // Raise an exception for invalid input
-        @throw [NSException exceptionWithName:@"InvalidInputException"
-            reason:@"Input is not a valid integer"
-            userInfo:nil];
-    }
-}
-
-// Function to convert a comma-separated string to an array of integers
-// Source: ChatGPT
-NSArray *convertStringToListOfIntegers(NSString *inputString) {
-    NSMutableArray *resultArray = [NSMutableArray array];
-
-    // Separate the input string into components using the comma as a delimiter
-    NSArray *components = [inputString componentsSeparatedByString:@","];
-
-    // Convert each component to an integer using the previous function
-    for (NSString *component in components) {
-        NSNumber *numberValue = [NSNumber numberWithInteger:convertAndValidateInput(component)];
-        [resultArray addObject:numberValue];
-    }
-
-    return [resultArray copy];
-}
-
-// Display array of integers
-void displayListOfIntegers(NSArray *integerArray) {
-    NSString *displayString = [integerArray componentsJoinedByString:@", "];
-    printf("%s\n", [displayString UTF8String]);
-}
-
-////////////////MERGE-SORT////////////////
-NSArray* mergeArrays(NSArray* A, NSArray* B) 
-{
-    NSMutableArray *orderedArray = [NSMutableArray new];
-    long indexLeft = 0;
-    long indexRight = 0;
-    
-    while (indexLeft < [A count] && indexRight < [B count]) {
-        int leftValue = [[A objectAtIndex:indexLeft] intValue];
-        int rightValue = [[B objectAtIndex:indexRight] intValue];
-        if (leftValue < rightValue) {
-            [orderedArray addObject:[A objectAtIndex:indexLeft++]];
-        }else if (leftValue > rightValue){
-            [orderedArray addObject:[B objectAtIndex:indexRight++]];
-        }else { //equal values
-            [orderedArray addObject:[A objectAtIndex:indexLeft++]];
-            [orderedArray addObject:[B objectAtIndex:indexRight++]];
-        }
-    }
-    
-    //If one array has more positions than the other (odd lenght of the inital array)
-    NSRange rangeRestLeft = NSMakeRange(indexLeft, A.count - indexLeft);
-    NSRange rangeRestRight = NSMakeRange(indexRight, B.count - indexRight);
-    NSArray *arrayTotalRight = [B subarrayWithRange:rangeRestRight];
-    NSArray *arrayTotalLeft = [A subarrayWithRange:rangeRestLeft];
-    arrayTotalLeft = [orderedArray arrayByAddingObjectsFromArray:arrayTotalLeft];
-    NSArray *orderedArrayCompleted = [arrayTotalLeft arrayByAddingObjectsFromArray:arrayTotalRight];
-    return orderedArrayCompleted;
-}
-
-NSArray* mergeSort(NSArray* randomArray){
-    
-    if ([randomArray count] < 2)
-    {
-        return randomArray;
-    }
-    int middlePivot = (int)[randomArray count]/2;
-    NSRange rangeLeft = NSMakeRange(0, middlePivot);
-    NSRange rangeRight = NSMakeRange(middlePivot, randomArray.count-middlePivot);
-    NSArray *leftArray = [randomArray subarrayWithRange:rangeLeft];
-    NSArray *rightArray = [randomArray subarrayWithRange:rangeRight];
-    return mergeArrays(mergeSort(leftArray),mergeSort(rightArray));
-}
-
-int main(int argc, char *argv[]) {
-    NSAutoreleasePool *pool =[[NSAutoreleasePool alloc] init];
-    NSString *usage = @"Usage: please provide a list of at least two integers to sort in the format \"1, 2, 3, 4, 5\"";
-    if (argc < 2) {
-        printf("%s\n", [usage UTF8String]);
-    }
-    else {
-        NSString* inputStr = [NSString stringWithUTF8String:argv[1]];
-        @try {
-            NSArray *inputArray = convertStringToListOfIntegers(inputStr);
-            if ([inputArray count] < 2) {
-                printf("%s\n", [usage UTF8String]);
-            }
-            else {
-                NSArray *sortedArray = mergeSort(inputArray);
-                displayListOfIntegers(sortedArray);
-            }
-        }
-        @catch (NSException *) {
-            printf("%s\n", [usage UTF8String]);
-        }
-    }
-
-    [pool drain];
-    return 0;
-}
+    Source for error message text:
+    https://copy.sh/brainfuck/text.html
+]
+; Mem 0 = 1 (indicate first char)
++
+; Mem 1 = input char; loop while not null
+>,[
+    ; Copy input char to Mem 2 and 3; setting Mem 1 to 0
+    >[-]
+    >[-]
+    <<[>+>+<<-]
+    ; If first char;
+    <[
+        ; Mem 5 = 26; Mem 3 = input char minus 97 ('a'); Mem 4 = 0 (uninitialized)
+        >>>>>>++++++++++[   ; Mem 6 = 10
+            <+++            ; Add 3 to Mem 5
+            <<----------    ; Sub 10 from Mem 3
+            >>>-            ; Dec Mem 6
+        ]
+        <----               ; Sub 4 from Mem 5
+        <<+++               ; Add 3 to Mem 3
+        ; Mem 3 = junk; Mem 4 = n; Mem 5 = d minus r; Mem 6 = r; Mem 7 = q
+        ; where:
+        ; * n = input char minus 97 (numerator)
+        ; * d = 26 (denominator)
+        ; * r = n % d (remainder)
+        ; * q = n / d (quotient)
+        ;
+        ; q will be zero if input char is lowercase; not zero otherwise
+        [->+>-[>+>>]>[+[-<+>]>+>>]<<<<<<]
+        ; Sub 32 from Mem 2 (copy of input char) to potentially make it uppercase
+        <<++++[             ; Mem 1 = 4
+            >--------       ; Sub 8 from Mem 2
+            <-              ; Dec Mem 1
+        ]
+        ; If Mem 7 (q) is not zero (not a lowercase char); add 32 to Mem 2 to undo above
+        ; (restore copy of input char)
+        >>>>>>[
+            <<<<<<++++[     ; Mem 1 = 4
+                >++++++++   ; Add 8 to Mem 2
+                <-          ; Dec Mem 1
+            ]
+            >>>>>>[-]       ; Mem 7 = 0
+        ]
+        ; Mem 0 = 0 (indicate not first char)
+        <<<<<<<[-]
+    ]
+    ; Output Mem 32 (copy of input char; uppercased for first char)
+    >>.
+    ; Mem 1 = input char
+    <,
+]
+; If first char was null; display error message
+<[
+    [-]
+    -[--->+<]>.
+    +[--->+<]>+.
+    ++[->+++<]>++.
+    ++++++.
+    --.
+    +++[->+++<]>++.
+    [-->+<]>+++.
+    [-->+++++++<]>.
+    ----.
+    -------.
+    ----.
+    --[--->+<]>--.
+    ++++[->+++<]>.
+    --[--->+<]>-.
+    [-->+++++++<]>.
+    ++.
+    ---.
+    +++++++.
+    [------>+<]>.
+    -----.
+    +.
+    --[--->+<]>-.
+    [->+++<]>+.
+    -[->+++<]>.
+    ---[->++++<]>-.
+    +.
+    --.
+    ---------.
+    +++++.
+    -------.
+    <
+]
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [Maybe Generative AI Is Just a Symptom of a Broader Problem in Tech](https://therenegadecoder.com/blog/maybe-generative-ai-is-just-a-symptom-of-a-broader-problem-in-tech/)
+- :apple: [It’s Time to Collect Mid-Semester Feedback](https://therenegadecoder.com/teach/its-time-to-collect-mid-semester-feedback/)
 - :thought_balloon: [2024: Year in Review](https://therenegadecoder.com/meta/2024-year-in-review/)
 - :black_nib: [Is Anyone Else Bothered by How Quickly We Adopted Generative AI?](https://therenegadecoder.com/blog/is-anyone-else-bothered-by-how-quickly-we-adopted-generative-ai/)
 - :black_nib: [31 Lessons Learned as a New Dad](https://therenegadecoder.com/blog/31-lessons-learned-as-a-new-dad/)
@@ -127,8 +108,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :computer: [How to Move Your Extensions Folder in VS Code](https://therenegadecoder.com/code/how-to-move-your-extensions-folder-in-vs-code/)
 - :thought_balloon: [Sample Programs Repo Celebrates 1,000 Code Snippets](https://therenegadecoder.com/meta/sample-programs-repo-celebrates-1000-code-snippets/)
 - :apple: [Canvas Is Not Built With Educators in Mind](https://therenegadecoder.com/teach/canvas-is-not-built-with-educators-in-mind/)
-- :computer: [Workshopping a Tier List Generator](https://therenegadecoder.com/code/workshopping-a-tier-list-generator/)
-- :black_nib: [No, The GRE Should Not Be Reinstated](https://therenegadecoder.com/blog/no-the-gre-should-not-be-reinstated/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -140,4 +119,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-02-28 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-03-07 using [SnakeMD](https://www.snakemd.io).
