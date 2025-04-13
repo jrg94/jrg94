@@ -1,55 +1,22 @@
 # Welcome to My Profile!
 
-This week's code snippet, Rot13 in Rust, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Baklava in Eta, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Rust
-use std::env;
+```Eta
+module Main where
 
-fn rot13(input: String) -> String {
-    let mut output = String::new();
-    
-    for character in input.chars() {
-        let offset;
+baklavaLine :: Int -> String
+baklavaLine n = (replicate numSpaces ' ') ++ (replicate numStars '*') ++ "\n"
+    where
+        numSpaces = abs(n - 10)
+        numStars = 21 - 2 * numSpaces
 
-        if character.is_ascii_lowercase() {
-            offset = 'a' as u8;
-        }
-        else if character.is_ascii_uppercase() {
-            offset = 'A' as u8;
-        }
-        else {
-            output.push(character);
-            continue;
-        }
-    
-        let mut rotated = character as u8;
-        rotated -= offset;
-        rotated += 13;
-        rotated %= 26;
-        rotated += offset;
-        
-        output.push(rotated as char);
-    }
-    
-    return output;
-}
+baklava :: String -> Int -> String
+baklava s 0 = s ++ baklavaLine 0
+baklava s n = s ++ baklavaLine n ++ baklava s (n - 1)
 
-fn main() {
-    let args: Vec<String> = env::args().collect();
-    if (args.len() == 1) {
-        println!("Usage: please provide a string to encrypt");
-        return;
-    }
-    
-    let input = args[1].to_string();
-    if (input.is_empty()) {
-        println!("Usage: please provide a string to encrypt");
-        return;
-    }
-    
-    let output = rot13(input);
-    println!("{}", output);
-}
+main :: IO ()
+main = putStr (baklava "" 20)
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
