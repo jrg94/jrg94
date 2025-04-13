@@ -20,6 +20,9 @@ dependencies = [
 homepage = "https://jeremygrifski.com"
 repository = "https://github.com/jrg94/jrg94"
 
+[tool.poetry]
+package-mode = false
+
 # Build system settings
 [build-system]
 requires = ["poetry-core"]
