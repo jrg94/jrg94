@@ -1,26 +1,63 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in Eta, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Palindromic Number in Perl, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Eta
-module Main where
+```Perl
+# accept an integer, reverse it, compare it with original
+# print true, if original and reversed number are same
+# print false, if original and reversed number are same
+#!/usr/bin/env perl
+use strict;
+use warnings;
 
-baklavaLine :: Int -> String
-baklavaLine n = (replicate numSpaces ' ') ++ (replicate numStars '*') ++ "\n"
-    where
-        numSpaces = abs(n - 10)
-        numStars = 21 - 2 * numSpaces
+# no input
+usage() unless @ARGV == 1;
 
-baklava :: String -> Int -> String
-baklava s 0 = s ++ baklavaLine 0
-baklava s n = s ++ baklavaLine n ++ baklava s (n - 1)
+# accept input as argument
+my ($number) = @ARGV;
 
-main :: IO ()
-main = putStr (baklava "" 20)
+# if not provided, read from standard input
+if (!defined $number) {
+	$number = <STDIN>;
+	chomp $number;
+}
+
+if (!defined $number || $number !~ /^\d+$/ || $number < 0) {
+	usage();
+}
+
+my $temp = $number;
+my $noofdigits = 0;
+my $reversed_number = 0;
+while ($temp > 0){
+  $reversed_number = ($reversed_number * 10) + ($temp % 10);
+  $temp = int($temp / 10);
+  $noofdigits += 1;
+}
+
+if ($number < 0){
+  print("Usage: please input a non-negative integer")
+}
+
+else{
+  if ($reversed_number == $number){
+    print("true");
+    }
+  else{
+    print("false");
+  }
+
+}
+
+sub usage {
+	print "Usage: please input a non-negative integer";
+	exit;
+}
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :computer: [A Case Study on the Philosophy of Software Design](https://therenegadecoder.com/code/a-case-study-on-the-philosophy-of-software-design/)
 - :black_nib: [Inside the Mind of an Engineer: How to Make Societal Issues Worse](https://therenegadecoder.com/blog/inside-the-mind-of-an-engineer-how-to-make-societal-issues-worse/)
 - :black_nib: [How Attack on Titan Undermines Its Own Message](https://therenegadecoder.com/blog/how-attack-on-titan-undermines-its-own-message/)
 - :computer: [Migrating to Poetry 2.x With Some Best Practices](https://therenegadecoder.com/code/migrating-to-poetry-2-x-with-some-best-practices/)
@@ -30,7 +67,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [Is Anyone Else Bothered by How Quickly We Adopted Generative AI?](https://therenegadecoder.com/blog/is-anyone-else-bothered-by-how-quickly-we-adopted-generative-ai/)
 - :black_nib: [31 Lessons Learned as a New Dad](https://therenegadecoder.com/blog/31-lessons-learned-as-a-new-dad/)
 - :apple: [So You’re Not Sure If Computer Science Is for You](https://therenegadecoder.com/teach/so-youre-not-sure-if-computer-science-is-for-you/)
-- :apple: [You Should Give Open-Ended Projects to Your Students](https://therenegadecoder.com/teach/you-should-give-open-ended-projects-to-your-students/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -42,4 +78,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-04-13 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-04-18 using [SnakeMD](https://www.snakemd.io).
