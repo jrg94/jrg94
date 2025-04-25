@@ -1,62 +1,60 @@
 # Welcome to My Profile!
 
-This week's code snippet, Palindromic Number in Perl, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Bubble Sort in Octave, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Perl
-# accept an integer, reverse it, compare it with original
-# print true, if original and reversed number are same
-# print false, if original and reversed number are same
-#!/usr/bin/env perl
-use strict;
-use warnings;
+```Octave
+function bubble_sort()
+    %input validation
+    usage = 'Usage: please provide a list of at least two integers to sort in the format "1, 2, 3, 4, 5"';
+    arg_list = argv();
+    nargin = length(arg_list);
+    if  nargin == 0
+        %if there was no input
+        disp(usage);
+        return;
+    end
 
-# no input
-usage() unless @ARGV == 1;
+    array_string = arg_list{1};
+    array_size = sum(array_string == ',') + 1;
+    if array_size < 2
+        disp(usage);
+        return;
+    end
 
-# accept input as argument
-my ($number) = @ARGV;
+    %build array
+    array = str2num(array_string);
+    if length(array) ~= array_size || any(mod(array, 1) ~= 0)
+        disp(usage);
+        return;
+    end
 
-# if not provided, read from standard input
-if (!defined $number) {
-	$number = <STDIN>;
-	chomp $number;
-}
+    %to keep track of whether any changes have been made on each pass
+    flag = 1;
 
-if (!defined $number || $number !~ /^\d+$/ || $number < 0) {
-	usage();
-}
+    while flag == 1
+        flag = 0;
+        for i = 1:array_size-1
+            if array(i) > array(i+1)
+                temp = array(i+1);
+                array(i+1) = array(i);
+                array(i) = temp;
+                flag = 1;
+            end
+        end
+    end
 
-my $temp = $number;
-my $noofdigits = 0;
-my $reversed_number = 0;
-while ($temp > 0){
-  $reversed_number = ($reversed_number * 10) + ($temp % 10);
-  $temp = int($temp / 10);
-  $noofdigits += 1;
-}
+    %convert to string
+    result_string = num2str(array);
 
-if ($number < 0){
-  print("Usage: please input a non-negative integer")
-}
-
-else{
-  if ($reversed_number == $number){
-    print("true");
-    }
-  else{
-    print("false");
-  }
-
-}
-
-sub usage {
-	print "Usage: please input a non-negative integer";
-	exit;
-}
+    %replace space with ', '
+    result_string = regexprep(result_string, '\s+', ', ');
+    disp(result_string);
+end
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [Why I Left Twitter](https://therenegadecoder.com/blog/why-i-left-twitter/)
 - :computer: [A Case Study on the Philosophy of Software Design](https://therenegadecoder.com/code/a-case-study-on-the-philosophy-of-software-design/)
 - :black_nib: [Inside the Mind of an Engineer: How to Make Societal Issues Worse](https://therenegadecoder.com/blog/inside-the-mind-of-an-engineer-how-to-make-societal-issues-worse/)
 - :black_nib: [How Attack on Titan Undermines Its Own Message](https://therenegadecoder.com/blog/how-attack-on-titan-undermines-its-own-message/)
@@ -66,7 +64,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :thought_balloon: [2024: Year in Review](https://therenegadecoder.com/meta/2024-year-in-review/)
 - :black_nib: [Is Anyone Else Bothered by How Quickly We Adopted Generative AI?](https://therenegadecoder.com/blog/is-anyone-else-bothered-by-how-quickly-we-adopted-generative-ai/)
 - :black_nib: [31 Lessons Learned as a New Dad](https://therenegadecoder.com/blog/31-lessons-learned-as-a-new-dad/)
-- :apple: [So You’re Not Sure If Computer Science Is for You](https://therenegadecoder.com/teach/so-youre-not-sure-if-computer-science-is-for-you/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -78,4 +75,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-04-18 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-04-25 using [SnakeMD](https://www.snakemd.io).
