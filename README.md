@@ -1,59 +1,65 @@
 # Welcome to My Profile!
 
-This week's code snippet, Bubble Sort in Octave, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Factorial in Cobol, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Octave
-function bubble_sort()
-    %input validation
-    usage = 'Usage: please provide a list of at least two integers to sort in the format "1, 2, 3, 4, 5"';
-    arg_list = argv();
-    nargin = length(arg_list);
-    if  nargin == 0
-        %if there was no input
-        disp(usage);
-        return;
-    end
+```Cobol
+IDENTIFICATION DIVISION.
+        PROGRAM-ID. FACTORIAL.
+        DATA DIVISION.
+        WORKING-STORAGE SECTION.
+          01 CMD-ARGS                  PIC X(38).
+          01 DECINUM                  PIC S9999v99.
+          01 NUM                      PIC S9(7).
+          01 FACTORIAL                PIC 9(15) VALUE 1.
+          01 LEFT-JUST-NUMBER         PIC X(16).
+          01 WS-TALLY1                PIC 99 VALUE 0.
+          01 CNT                      PIC 9(7) VALUE 1.
 
-    array_string = arg_list{1};
-    array_size = sum(array_string == ',') + 1;
-    if array_size < 2
-        disp(usage);
-        return;
-    end
+        PROCEDURE DIVISION.
+           ACCEPT CMD-ARGS FROM COMMAND-LINE.
 
-    %build array
-    array = str2num(array_string);
-    if length(array) ~= array_size || any(mod(array, 1) ~= 0)
-        disp(usage);
-        return;
-    end
+           IF CMD-ARGS IS ALPHABETIC THEN
+              PERFORM ERROR-PARA.
+           
+      * Convert CMDARGS to it's numeric value
+           COMPUTE DECINUM = FUNCTION NUMVAL(CMD-ARGS).
+           
+           IF DECINUM < 0 THEN
+              PERFORM ERROR-PARA.
 
-    %to keep track of whether any changes have been made on each pass
-    flag = 1;
+      * Move the Decimal number to Non decimal number
+           MOVE DECINUM TO NUM
+      
+      * If both are equal, then it was an integer
+           IF NUM IS EQUAL TO DECINUM THEN
+              IF NUM IS EQUAL TO 0 OR NUM IS EQUAL TO 1 THEN
+                 DISPLAY 1
+                 STOP RUN                 
+              ELSE
+                 PERFORM CALC-FACT UNTIL CNT > NUM
+      
+      * Process to left justify the number
+                 INSPECT FACTORIAL TALLYING WS-TALLY1 FOR LEADING ZEROS
+                 Move FACTORIAL (WS-TALLY1 + 1 :) TO LEFT-JUST-NUMBER
+      * Display the left justified result
+                 DISPLAY LEFT-JUST-NUMBER
+                 STOP RUN
+           ELSE 
+              PERFORM ERROR-PARA.
+           
+           
+          CALC-FACT.
+            COMPUTE FACTORIAL = FACTORIAL * CNT
+            COMPUTE CNT = CNT + 1.
 
-    while flag == 1
-        flag = 0;
-        for i = 1:array_size-1
-            if array(i) > array(i+1)
-                temp = array(i+1);
-                array(i+1) = array(i);
-                array(i) = temp;
-                flag = 1;
-            end
-        end
-    end
-
-    %convert to string
-    result_string = num2str(array);
-
-    %replace space with ', '
-    result_string = regexprep(result_string, '\s+', ', ');
-    disp(result_string);
-end
+          ERROR-PARA.
+           DISPLAY "Usage: please input a non-negative integer".
+           STOP RUN.
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :apple: [Reflecting on My First Two Years as a Lecturer](https://therenegadecoder.com/teach/reflecting-on-my-first-two-years-as-a-lecturer/)
 - :black_nib: [Why I Left Twitter](https://therenegadecoder.com/blog/why-i-left-twitter/)
 - :computer: [A Case Study on the Philosophy of Software Design](https://therenegadecoder.com/code/a-case-study-on-the-philosophy-of-software-design/)
 - :black_nib: [Inside the Mind of an Engineer: How to Make Societal Issues Worse](https://therenegadecoder.com/blog/inside-the-mind-of-an-engineer-how-to-make-societal-issues-worse/)
@@ -63,7 +69,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :apple: [It’s Time to Collect Mid-Semester Feedback](https://therenegadecoder.com/teach/its-time-to-collect-mid-semester-feedback/)
 - :thought_balloon: [2024: Year in Review](https://therenegadecoder.com/meta/2024-year-in-review/)
 - :black_nib: [Is Anyone Else Bothered by How Quickly We Adopted Generative AI?](https://therenegadecoder.com/blog/is-anyone-else-bothered-by-how-quickly-we-adopted-generative-ai/)
-- :black_nib: [31 Lessons Learned as a New Dad](https://therenegadecoder.com/blog/31-lessons-learned-as-a-new-dad/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -75,4 +80,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-04-25 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-05-02 using [SnakeMD](https://www.snakemd.io).
