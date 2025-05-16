@@ -1,26 +1,33 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in Forth, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Baklava in Owl Lisp, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Forth
-: baklava
-  ( for counter = -10 to 10 )
-  11 -10 do
-    i                       \ put outermost loop index on the stack
-    abs                     \ num-spaces = abs(counter)
-    dup spaces              \ output num-spaces " "
-    -2 * 21 +               \ num-stars = 21 - 2 * num-spaces
-    0 do [char] * emit loop \ for inner-counter = 0 to num-stars - 1, output "*"
-                            \ Source: https://rosettacode.org/wiki/Loops/For#Forth
-    cr
-    loop ;
+```Owl Lisp
+(define (string-repeat n str)
+  (fold string-append "" (make-list n str))
+)
 
-baklava
-bye
+(define (baklava-line n)
+  (define num-spaces (abs n))
+  (define num-stars (- 21 (* 2 num-spaces)))
+  (print (string-repeat num-spaces " ") (string-repeat num-stars "*"))
+)
+
+(define (baklava n ne)
+  (if (<= n ne)
+    (begin
+      (baklava-line n)
+      (baklava (+ n 1) ne)
+    )
+  )
+)
+
+( (args) (baklava -10 10))
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :apple: [Generative AI Makes It Feel Bad to Be an Educator](https://therenegadecoder.com/teach/generative-ai-makes-it-feel-bad-to-be-an-educator/)
 - :black_nib: [The Problem With Centrism: A Case Study](https://therenegadecoder.com/blog/the-problem-with-centrism-a-case-study/)
 - :apple: [Reflecting on My First Two Years as a Lecturer](https://therenegadecoder.com/teach/reflecting-on-my-first-two-years-as-a-lecturer/)
 - :black_nib: [Why I Left Twitter](https://therenegadecoder.com/blog/why-i-left-twitter/)
@@ -30,7 +37,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :computer: [Migrating to Poetry 2.x With Some Best Practices](https://therenegadecoder.com/code/migrating-to-poetry-2-x-with-some-best-practices/)
 - :black_nib: [Maybe Generative AI Is Just a Symptom of a Broader Problem in Tech](https://therenegadecoder.com/blog/maybe-generative-ai-is-just-a-symptom-of-a-broader-problem-in-tech/)
 - :apple: [It’s Time to Collect Mid-Semester Feedback](https://therenegadecoder.com/teach/its-time-to-collect-mid-semester-feedback/)
-- :thought_balloon: [2024: Year in Review](https://therenegadecoder.com/meta/2024-year-in-review/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -42,4 +48,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-05-09 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-05-16 using [SnakeMD](https://www.snakemd.io).
