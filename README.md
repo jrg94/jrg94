@@ -1,13 +1,23 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Elixir, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Baklava in Dusk, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Elixir
-IO.puts "Hello, World!"
+```Dusk
+let repeat_string = |s, n| join(alloc(n, s), '')
+
+let n = -10
+while n < 11 {
+    let num_spaces = n
+    if num_spaces < 0: num_spaces = -num_spaces
+    let num_stars = 21 - 2 * num_spaces
+    n += 1
+    println(repeat_string(' ', num_spaces) + repeat_string('*', num_stars))
+}
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :apple: [4 Values We Have to Stop Pushing in Engineering Education](https://therenegadecoder.com/teach/values-we-have-to-stop-pushing-in-engineering-education/)
 - :black_nib: [Generative AI Has a Short Shelf Life](https://therenegadecoder.com/blog/generative-ai-has-a-short-shelf-life/)
 - :black_nib: [Reflecting on My First Trip to Japan](https://therenegadecoder.com/blog/reflecting-on-my-first-trip-to-japan/)
 - :apple: [SB1 Is the Death of Higher Education in Ohio](https://therenegadecoder.com/teach/sb1-is-the-death-of-higher-education-in-ohio/)
@@ -17,7 +27,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :apple: [Reflecting on My First Two Years as a Lecturer](https://therenegadecoder.com/teach/reflecting-on-my-first-two-years-as-a-lecturer/)
 - :black_nib: [Why I Left Twitter](https://therenegadecoder.com/blog/why-i-left-twitter/)
 - :computer: [A Case Study on the Philosophy of Software Design](https://therenegadecoder.com/code/a-case-study-on-the-philosophy-of-software-design/)
-- :black_nib: [Inside the Mind of an Engineer: How to Make Societal Issues Worse](https://therenegadecoder.com/blog/inside-the-mind-of-an-engineer-how-to-make-societal-issues-worse/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -29,4 +38,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-06-13 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-06-20 using [SnakeMD](https://www.snakemd.io).
