@@ -1,22 +1,30 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in Dusk, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Baklava in F\*, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Dusk
-let repeat_string = |s, n| join(alloc(n, s), '')
+```F\*
+module Baklava
 
-let n = -10
-while n < 11 {
-    let num_spaces = n
-    if num_spaces < 0: num_spaces = -num_spaces
-    let num_stars = 21 - 2 * num_spaces
-    n += 1
-    println(repeat_string(' ', num_spaces) + repeat_string('*', num_stars))
-}
+open FStar.IO
+open FStar.Math.Lib
+open FStar.Mul
+
+let baklava_line (n:nat {n <= 20}) : string =
+  let num_spaces:nat = (abs (n - 10)) in
+  let num_stars:nat = 21 - 2 * num_spaces in
+  (String.make num_spaces ' ') ^ (String.make num_stars '*') ^ "\n"
+
+let rec baklava (lines:string) (n:nat {n <= 20}) : string =
+  match n with
+  | 0 -> lines ^ (baklava_line 0)
+  | _ -> lines ^ (baklava_line n) ^ (baklava lines (n - 1))
+
+let main = print_string (baklava "" 20)
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [The Acceleration of the Enshittification of Everything](https://therenegadecoder.com/blog/the-acceleration-of-the-enshittification-of-everything/)
 - :apple: [4 Values We Have to Stop Pushing in Engineering Education](https://therenegadecoder.com/teach/values-we-have-to-stop-pushing-in-engineering-education/)
 - :black_nib: [Generative AI Has a Short Shelf Life](https://therenegadecoder.com/blog/generative-ai-has-a-short-shelf-life/)
 - :black_nib: [Reflecting on My First Trip to Japan](https://therenegadecoder.com/blog/reflecting-on-my-first-trip-to-japan/)
@@ -26,7 +34,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [The Problem With Centrism: A Case Study](https://therenegadecoder.com/blog/the-problem-with-centrism-a-case-study/)
 - :apple: [Reflecting on My First Two Years as a Lecturer](https://therenegadecoder.com/teach/reflecting-on-my-first-two-years-as-a-lecturer/)
 - :black_nib: [Why I Left Twitter](https://therenegadecoder.com/blog/why-i-left-twitter/)
-- :computer: [A Case Study on the Philosophy of Software Design](https://therenegadecoder.com/code/a-case-study-on-the-philosophy-of-software-design/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -38,4 +45,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-06-20 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-06-27 using [SnakeMD](https://www.snakemd.io).
