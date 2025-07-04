@@ -1,29 +1,68 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in F\*, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Fizz Buzz in Whitespace, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```F\*
-module Baklava
-
-open FStar.IO
-open FStar.Math.Lib
-open FStar.Mul
-
-let baklava_line (n:nat {n <= 20}) : string =
-  let num_spaces:nat = (abs (n - 10)) in
-  let num_stars:nat = 21 - 2 * num_spaces in
-  (String.make num_spaces ' ') ^ (String.make num_stars '*') ^ "\n"
-
-let rec baklava (lines:string) (n:nat {n <= 20}) : string =
-  match n with
-  | 0 -> lines ^ (baklava_line 0)
-  | _ -> lines ^ (baklava_line n) ^ (baklava lines (n - 1))
-
-let main = print_string (baklava "" 20)
+```Whitespace
+S S S T	L
+L
+S S S L
+S S S T	L
+S S S T	T	S T	S S T	L
+S S S T	S S S T	T	S L
+S S S T	T	L
+L
+S T	T	S L
+S S S T	T	T	S T	S T	L
+S S S T	S S S S T	S L
+S S S T	S T	L
+L
+S T	T	S L
+L
+T	S T	L
+S L
+S T	L
+S T	L
+S S T	L
+S S S T	S T	S L
+T	L
+S S S S S T	L
+T	S S S S L
+S S S S T	T	S S T	S T	L
+T	S S T	L
+T	T	S L
+L
+L
+L
+L
+S S T	S L
+S T	S S T	S S L
+S L
+T	T	S T	T	L
+T	S T	T	L
+S L
+L
+S L
+L
+L
+T	L
+L
+S S T	T	L
+T	L
+S S T	L
+S S S S S T	T	T	T	S T	S L
+T	L
+S S S S S T	T	T	T	S T	S L
+T	L
+S S S L
+L
+S S S S L
+L
+T	L
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [ChatGPT Is Stack Overflow for the Lazy and Helpless](https://therenegadecoder.com/blog/chatgpt-is-stack-overflow-for-the-lazy-and-helpless/)
 - :black_nib: [The Acceleration of the Enshittification of Everything](https://therenegadecoder.com/blog/the-acceleration-of-the-enshittification-of-everything/)
 - :apple: [4 Values We Have to Stop Pushing in Engineering Education](https://therenegadecoder.com/teach/values-we-have-to-stop-pushing-in-engineering-education/)
 - :black_nib: [Generative AI Has a Short Shelf Life](https://therenegadecoder.com/blog/generative-ai-has-a-short-shelf-life/)
@@ -33,7 +72,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :apple: [Generative AI Makes It Feel Bad to Be an Educator](https://therenegadecoder.com/teach/generative-ai-makes-it-feel-bad-to-be-an-educator/)
 - :black_nib: [The Problem With Centrism: A Case Study](https://therenegadecoder.com/blog/the-problem-with-centrism-a-case-study/)
 - :apple: [Reflecting on My First Two Years as a Lecturer](https://therenegadecoder.com/teach/reflecting-on-my-first-two-years-as-a-lecturer/)
-- :black_nib: [Why I Left Twitter](https://therenegadecoder.com/blog/why-i-left-twitter/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -45,4 +83,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-06-27 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-07-04 using [SnakeMD](https://www.snakemd.io).
