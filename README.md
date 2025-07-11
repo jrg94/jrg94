@@ -1,67 +1,28 @@
 # Welcome to My Profile!
 
-This week's code snippet, Fizz Buzz in Whitespace, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Baklava in Formality, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Whitespace
-S S S T	L
-L
-S S S L
-S S S T	L
-S S S T	T	S T	S S T	L
-S S S T	S S S T	T	S L
-S S S T	T	L
-L
-S T	T	S L
-S S S T	T	T	S T	S T	L
-S S S T	S S S S T	S L
-S S S T	S T	L
-L
-S T	T	S L
-L
-T	S T	L
-S L
-S T	L
-S T	L
-S S T	L
-S S S T	S T	S L
-T	L
-S S S S S T	L
-T	S S S S L
-S S S S T	T	S S T	S T	L
-T	S S T	L
-T	T	S L
-L
-L
-L
-L
-S S T	S L
-S T	S S T	S S L
-S L
-T	T	S T	T	L
-T	S T	T	L
-S L
-L
-S L
-L
-L
-T	L
-L
-S S T	T	L
-T	L
-S S T	L
-S S S S S T	T	T	T	S T	S L
-T	L
-S S S S S T	T	T	T	S T	S L
-T	L
-S S S L
-L
-S S S S L
-L
-T	L
+```Formality
+baklavaLine(n: Nat): String
+  let numSpaces = if Nat.gte(n, 10) then Nat.sub(n, 10) else Nat.sub(10, n)
+  let numStars = Nat.sub(21, Nat.mul(2, numSpaces))
+  String.repeat(" ", numSpaces) | String.repeat("*", numStars) | "\n"
+
+baklava(lines: String, n:Nat): String
+  case n {
+    zero: lines | baklavaLine(0),
+    succ: lines | baklavaLine(n) | baklava(lines, n.pred)
+  }
+
+Main: IO(Unit)
+  do IO {
+    IO.put_string(baklava("", 20))
+  }
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [The Worst Use Cases for Generative AI That Are Already Mainstream](https://therenegadecoder.com/blog/the-worst-use-cases-for-generative-ai-that-are-already-mainstream/)
 - :black_nib: [ChatGPT Is Stack Overflow for the Lazy and Helpless](https://therenegadecoder.com/blog/chatgpt-is-stack-overflow-for-the-lazy-and-helpless/)
 - :black_nib: [The Acceleration of the Enshittification of Everything](https://therenegadecoder.com/blog/the-acceleration-of-the-enshittification-of-everything/)
 - :apple: [4 Values We Have to Stop Pushing in Engineering Education](https://therenegadecoder.com/teach/values-we-have-to-stop-pushing-in-engineering-education/)
@@ -71,7 +32,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [No, Generative AI Is Not Just Another Innovation](https://therenegadecoder.com/blog/no-generative-ai-is-not-just-another-innovation/)
 - :apple: [Generative AI Makes It Feel Bad to Be an Educator](https://therenegadecoder.com/teach/generative-ai-makes-it-feel-bad-to-be-an-educator/)
 - :black_nib: [The Problem With Centrism: A Case Study](https://therenegadecoder.com/blog/the-problem-with-centrism-a-case-study/)
-- :apple: [Reflecting on My First Two Years as a Lecturer](https://therenegadecoder.com/teach/reflecting-on-my-first-two-years-as-a-lecturer/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -83,4 +43,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-07-04 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-07-11 using [SnakeMD](https://www.snakemd.io).
