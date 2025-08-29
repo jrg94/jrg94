@@ -1,14 +1,14 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Forth, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Moonscript, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Forth
-.( Hello, World!) CR
-bye
+```Moonscript
+print "Hello, World!"
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [The Future of AI Is Ubiquitous Surveillance](https://therenegadecoder.com/blog/the-future-of-ai-is-ubiquitous-surveillance/)
 - :black_nib: [Y’all Need to Stop Using Generative AI for Summaries](https://therenegadecoder.com/blog/yall-need-to-stop-using-generative-ai-for-summaries/)
 - :computer: [Loop Invariants Are Necessary for Writing Proper Loops](https://therenegadecoder.com/code/loop-invariants-are-necessary-for-writing-proper-loops/)
 - :computer: [Dark Arts: Labeled Statements in Java](https://therenegadecoder.com/code/dark-arts-labeled-statements-in-java/)
@@ -18,7 +18,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [The Worst Use Cases for Generative AI That Are Already Mainstream](https://therenegadecoder.com/blog/the-worst-use-cases-for-generative-ai-that-are-already-mainstream/)
 - :black_nib: [ChatGPT Is Stack Overflow for the Lazy and Helpless](https://therenegadecoder.com/blog/chatgpt-is-stack-overflow-for-the-lazy-and-helpless/)
 - :black_nib: [The Acceleration of the Enshittification of Everything](https://therenegadecoder.com/blog/the-acceleration-of-the-enshittification-of-everything/)
-- :apple: [4 Values We Have to Stop Pushing in Engineering Education](https://therenegadecoder.com/teach/values-we-have-to-stop-pushing-in-engineering-education/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -30,4 +29,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-08-22 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-08-29 using [SnakeMD](https://www.snakemd.io).
