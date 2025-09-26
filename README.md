@@ -1,29 +1,17 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in F\*, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Baklava in Wren, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```F\*
-module Baklava
-
-open FStar.IO
-open FStar.Math.Lib
-open FStar.Mul
-
-let baklava_line (n:nat {n <= 20}) : string =
-  let num_spaces:nat = (abs (n - 10)) in
-  let num_stars:nat = 21 - 2 * num_spaces in
-  (String.make num_spaces ' ') ^ (String.make num_stars '*') ^ "\n"
-
-let rec baklava (lines:string) (n:nat {n <= 20}) : string =
-  match n with
-  | 0 -> lines ^ (baklava_line 0)
-  | _ -> lines ^ (baklava_line n) ^ (baklava lines (n - 1))
-
-let main = print_string (baklava "" 20)
+```Wren
+for (i in (-10..10)) {
+  var numSpaces = (i >= 0) ? i : -i
+  System.print(" " * numSpaces + "*" * (21 - 2 *numSpaces))
+}
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :apple: [Yes, You Need General Education in College](https://therenegadecoder.com/teach/yes-you-need-general-education-in-college/)
 - :apple: [Higher Education Should Not Be a Job Training Program](https://therenegadecoder.com/teach/higher-education-should-not-be-a-job-training-program/)
 - :black_nib: [Why Generative AI Makes the Future of Software Development Worse](https://therenegadecoder.com/blog/why-generative-ai-makes-the-future-of-software-development-worse/)
 - :black_nib: [Technology Will Not Liberate Us](https://therenegadecoder.com/blog/technology-will-not-liberate-us/)
@@ -33,7 +21,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :computer: [Dark Arts: Labeled Statements in Java](https://therenegadecoder.com/code/dark-arts-labeled-statements-in-java/)
 - :apple: [Gamification Will Not Solve “America’s Education Crisis”](https://therenegadecoder.com/teach/gamification-will-not-solve-americas-education-crisis/)
 - :black_nib: [“Just Ask Chat”: The Evolution of an Isolating Mantra](https://therenegadecoder.com/blog/just-ask-chat-the-evolution-of-an-isolating-mantra/)
-- :black_nib: [Life Update: I’m Doing Well](https://therenegadecoder.com/blog/life-update-im-doing-well/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -45,4 +32,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-09-19 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-09-26 using [SnakeMD](https://www.snakemd.io).
