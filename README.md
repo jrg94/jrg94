@@ -1,13 +1,17 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Boo, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Baklava in Ring, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Boo
-print "Hello, World!"
+```Ring
+for i = -10 to 10
+    numSpaces = fabs(i)
+    see copy(" ", numSpaces) + copy("*", 21 - 2 * numSpaces) + nl
+next
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [Nobody Wants to Have Kids](https://therenegadecoder.com/blog/nobody-wants-to-have-kids/)
 - :apple: [Experimenting With Hidden Prompts on Exams](https://therenegadecoder.com/teach/experimenting-with-hidden-prompts-on-exams/)
 - :thought_balloon: [Another Year, Another Hacktoberfest](https://therenegadecoder.com/meta/another-year-another-hacktoberfest/)
 - :black_nib: [I’m Learning a Language, and I’m Tired](https://therenegadecoder.com/blog/im-learning-a-language-and-im-tired/)
@@ -17,7 +21,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [Technology Will Not Liberate Us](https://therenegadecoder.com/blog/technology-will-not-liberate-us/)
 - :black_nib: [The Future of AI Is Ubiquitous Surveillance](https://therenegadecoder.com/blog/the-future-of-ai-is-ubiquitous-surveillance/)
 - :black_nib: [Y’all Need to Stop Using Generative AI for Summaries](https://therenegadecoder.com/blog/yall-need-to-stop-using-generative-ai-for-summaries/)
-- :computer: [Loop Invariants Are Necessary for Writing Proper Loops](https://therenegadecoder.com/code/loop-invariants-are-necessary-for-writing-proper-loops/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -29,4 +32,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-10-17 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-10-24 using [SnakeMD](https://www.snakemd.io).
