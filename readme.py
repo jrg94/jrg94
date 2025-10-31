@@ -94,7 +94,7 @@ def generate_readme(posts: list, code: subete.SampleProgram) -> Document:
         Inline("Twitter", link="https://twitter.com/RenegadeCoder94"),
         Inline("YouTube", link="https://www.youtube.com/channel/UCpyoVwOqYRlSAEUPEn7P9hw")
     ]))
-    readm.add_raw("[![An image of @jrg94's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/jrg94)](https://holopin.io/@jrg94)")
+    readme.add_raw("[![An image of @jrg94's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/jrg94)](https://holopin.io/@jrg94)")
     readme.add_horizontal_rule()
     now = datetime.today().strftime('%Y-%m-%d')
     readme.add_paragraph(f"This document was automatically rendered on {now} using SnakeMD.") \
