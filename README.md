@@ -1,13 +1,14 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in Felix, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Baklava in Nim, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Felix
-for i in -10..10 do
-    var num_spaces = abs(i);
-    var num_stars = 21 - 2 * num_spaces;
-    println$ " " * num_spaces + "*" * num_stars;
-done
+```Nim
+import strutils
+
+for n in -10..10:
+    var numSpaces: int = abs(n)
+    var numStars: int = 21 - 2 * numSpaces
+    echo repeat(" ", numSpaces), repeat("*", numStars)
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
