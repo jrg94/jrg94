@@ -1,16 +1,18 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in Ring, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Baklava in Felix, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Ring
-for i = -10 to 10
-    numSpaces = fabs(i)
-    see copy(" ", numSpaces) + copy("*", 21 - 2 * numSpaces) + nl
-next
+```Felix
+for i in -10..10 do
+    var num_spaces = abs(i);
+    var num_stars = 21 - 2 * num_spaces;
+    println$ " " * num_spaces + "*" * num_stars;
+done
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [Theseus’s PC: Eight Years of Changes to One Man’s Machine](https://therenegadecoder.com/blog/theseuss-pc-eight-years-of-changes-to-one-mans-machine/)
 - :black_nib: [Nobody Wants to Have Kids](https://therenegadecoder.com/blog/nobody-wants-to-have-kids/)
 - :apple: [Experimenting With Hidden Prompts on Exams](https://therenegadecoder.com/teach/experimenting-with-hidden-prompts-on-exams/)
 - :thought_balloon: [Another Year, Another Hacktoberfest](https://therenegadecoder.com/meta/another-year-another-hacktoberfest/)
@@ -20,7 +22,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [Why Generative AI Makes the Future of Software Development Worse](https://therenegadecoder.com/blog/why-generative-ai-makes-the-future-of-software-development-worse/)
 - :black_nib: [Technology Will Not Liberate Us](https://therenegadecoder.com/blog/technology-will-not-liberate-us/)
 - :black_nib: [The Future of AI Is Ubiquitous Surveillance](https://therenegadecoder.com/blog/the-future-of-ai-is-ubiquitous-surveillance/)
-- :black_nib: [Y’all Need to Stop Using Generative AI for Summaries](https://therenegadecoder.com/blog/yall-need-to-stop-using-generative-ai-for-summaries/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -30,6 +31,8 @@ Also, here are some fun links you can use to support my work.
 - [Twitter](https://twitter.com/RenegadeCoder94)
 - [YouTube](https://www.youtube.com/channel/UCpyoVwOqYRlSAEUPEn7P9hw)
 
+[![An image of @jrg94's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/jrg94)](https://holopin.io/@jrg94)
+
 ***
 
-This document was automatically rendered on 2025-10-24 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-10-31 using [SnakeMD](https://www.snakemd.io).
