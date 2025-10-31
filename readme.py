@@ -91,8 +91,7 @@ def generate_readme(posts: list, code: subete.SampleProgram) -> Document:
         Inline("Patreon", link="https://www.patreon.com/TheRenegadeCoder"),
         Inline("Discord", link="https://discord.gg/Jhmtj7Z"),
         Inline("Mailing List", link="https://therenegadecoder.com/about/newsletter"),
-        Inline("Twitter", link="https://twitter.com/RenegadeCoder94"),
-        Inline("YouTube", link="https://www.youtube.com/channel/UCpyoVwOqYRlSAEUPEn7P9hw")
+        Inline("YouTube", link="https://www.youtube.com/@TheRenegadeCoder")
     ]))
     readme.add_raw("[![An image of @jrg94's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/jrg94)](https://holopin.io/@jrg94)")
     readme.add_horizontal_rule()
