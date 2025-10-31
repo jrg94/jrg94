@@ -1,7 +1,7 @@
 [project]
 name = "jrg94-readme"
 description = "The automation script for my README."
-version = "1.1.0"
+version = "1.2.0"
 readme = "README.md"
 license = "MIT"
 
