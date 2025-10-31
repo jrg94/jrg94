@@ -1,9 +1,14 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Scheme, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Even Odd in Javascript, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Scheme
-(display "Hello, World!")
+```Javascript
+const input = process.argv[2] != '' ? Number(process.argv[2]) : null; //coerce the input into a number, ignore empty string
+if(!Number.isInteger(input)){ //if there is no input, input = undefined and the statement still prints
+    console.log('Usage: please input a number');
+} else {
+    console.log(input%2 === 0 ? 'Even' : 'Odd');
+}
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
