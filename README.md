@@ -1,18 +1,14 @@
 # Welcome to My Profile!
 
-This week's code snippet, Even Odd in Javascript, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Gosu, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Javascript
-const input = process.argv[2] != '' ? Number(process.argv[2]) : null; //coerce the input into a number, ignore empty string
-if(!Number.isInteger(input)){ //if there is no input, input = undefined and the statement still prints
-    console.log('Usage: please input a number');
-} else {
-    console.log(input%2 === 0 ? 'Even' : 'Odd');
-}
+```Gosu
+print("Hello, World!")
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [Recapping My First In-Person Academic Conference](https://therenegadecoder.com/blog/recapping-my-first-in-person-academic-conference/)
 - :black_nib: [Theseus’s PC: Eight Years of Changes to One Man’s Machine](https://therenegadecoder.com/blog/theseuss-pc-eight-years-of-changes-to-one-mans-machine/)
 - :black_nib: [Nobody Wants to Have Kids](https://therenegadecoder.com/blog/nobody-wants-to-have-kids/)
 - :apple: [Experimenting With Hidden Prompts on Exams](https://therenegadecoder.com/teach/experimenting-with-hidden-prompts-on-exams/)
@@ -22,7 +18,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :apple: [Higher Education Should Not Be a Job Training Program](https://therenegadecoder.com/teach/higher-education-should-not-be-a-job-training-program/)
 - :black_nib: [Why Generative AI Makes the Future of Software Development Worse](https://therenegadecoder.com/blog/why-generative-ai-makes-the-future-of-software-development-worse/)
 - :black_nib: [Technology Will Not Liberate Us](https://therenegadecoder.com/blog/technology-will-not-liberate-us/)
-- :black_nib: [The Future of AI Is Ubiquitous Surveillance](https://therenegadecoder.com/blog/the-future-of-ai-is-ubiquitous-surveillance/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -35,4 +30,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-10-31 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-11-07 using [SnakeMD](https://www.snakemd.io).
