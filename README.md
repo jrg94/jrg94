@@ -1,13 +1,17 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Typescript, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Gnu Make, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Typescript
-console.log("Hello, World!");
+```Gnu Make
+$(info Hello, World!)
+
+.PHONY: all
+all: ;@:
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [Not All Code Completion Is Generative AI](https://therenegadecoder.com/blog/not-all-code-completion-is-generative-ai/)
 - :black_nib: [AI Haters Stay Winning: What It’s Like to Be Constantly Vindicated](https://therenegadecoder.com/blog/ai-haters-stay-winning-what-its-like-to-be-constantly-vindicated/)
 - :black_nib: [Computer Science Career Advice in 2026? Your Guess Is as Good as Mine](https://therenegadecoder.com/blog/computer-science-career-advice-in-2026-your-guess-is-as-good-as-mine/)
 - :apple: [Why I Don’t Record My Lectures](https://therenegadecoder.com/teach/why-i-dont-record-my-lectures/)
@@ -17,7 +21,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [Theseus’s PC: Eight Years of Changes to One Man’s Machine](https://therenegadecoder.com/blog/theseuss-pc-eight-years-of-changes-to-one-mans-machine/)
 - :black_nib: [Nobody Wants to Have Kids](https://therenegadecoder.com/blog/nobody-wants-to-have-kids/)
 - :apple: [Experimenting With Hidden Prompts on Exams](https://therenegadecoder.com/teach/experimenting-with-hidden-prompts-on-exams/)
-- :thought_balloon: [Another Year, Another Hacktoberfest](https://therenegadecoder.com/meta/another-year-another-hacktoberfest/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -30,4 +33,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2025-12-12 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2025-12-19 using [SnakeMD](https://www.snakemd.io).
