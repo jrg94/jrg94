@@ -1,21 +1,39 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in Gravity, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Longest Palindromic Substring in Javascript, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Gravity
-func main() {
-    for (var n in -10...10) {
-        var numSpaces = Math.abs(n)
-        var numStars = 21 - 2 * numSpaces
-        var spaces = (numSpaces > 0) ? " ".repeat(numSpaces) : ""
-        var stars = "*".repeat(numStars)
-        System.print(spaces + stars)
+```Javascript
+const [, , input] = process.argv;
+
+const getLongestPalindromic = (string) => {
+  if (!string) return;
+
+  let longestPal = '';
+
+  for (let i = 1; i < string.length; i++) {
+    for (let j = 0; j < string.length - i; j++) {
+      let possiblePal = string.substring(j, j + i + 1).toLowerCase();
+
+      if (
+        possiblePal === [...possiblePal].reverse().join('') &&
+        possiblePal.length > longestPal.length
+      )
+        longestPal = possiblePal;
     }
-}
+  }
+
+  return longestPal;
+};
+
+console.log(
+  getLongestPalindromic(input) ||
+    'Usage: please provide a string that contains at least one palindrome'
+);
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :apple: [Encouraging Attendance With Peer Instruction](https://therenegadecoder.com/teach/encouraging-attendance-with-peer-instruction/)
 - :black_nib: [Conspiracy Theory: All Pro Sports Are Rigged Now](https://therenegadecoder.com/blog/conspiracy-theory-all-pro-sports-are-rigged-now/)
 - :apple: [Reflecting on My Teaching Journey Heading into 2026](https://therenegadecoder.com/teach/reflecting-on-my-teaching-journey-heading-into-2026/)
 - :apple: [I Hate That Student Feedback Is Now Reviewed by Machine Learning](https://therenegadecoder.com/teach/i-hate-that-student-feedback-is-now-reviewed-by-machine-learning/)
@@ -25,7 +43,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :apple: [Why I Don’t Record My Lectures](https://therenegadecoder.com/teach/why-i-dont-record-my-lectures/)
 - :black_nib: [Should You Use Git on Personal Projects No One Will Ever See?](https://therenegadecoder.com/blog/should-you-use-git-on-personal-projects-no-one-will-ever-see/)
 - :black_nib: [The Era of Narks Is Upon Us](https://therenegadecoder.com/blog/the-era-of-narks-is-upon-us/)
-- :black_nib: [Recapping My First In-Person Academic Conference](https://therenegadecoder.com/blog/recapping-my-first-in-person-academic-conference/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -38,4 +55,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-01-09 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-01-16 using [SnakeMD](https://www.snakemd.io).
