@@ -1,38 +1,14 @@
 # Welcome to My Profile!
 
-This week's code snippet, Longest Palindromic Substring in Javascript, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Wu, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Javascript
-const [, , input] = process.argv;
-
-const getLongestPalindromic = (string) => {
-  if (!string) return;
-
-  let longestPal = '';
-
-  for (let i = 1; i < string.length; i++) {
-    for (let j = 0; j < string.length - i; j++) {
-      let possiblePal = string.substring(j, j + i + 1).toLowerCase();
-
-      if (
-        possiblePal === [...possiblePal].reverse().join('') &&
-        possiblePal.length > longestPal.length
-      )
-        longestPal = possiblePal;
-    }
-  }
-
-  return longestPal;
-};
-
-console.log(
-  getLongestPalindromic(input) ||
-    'Usage: please provide a string that contains at least one palindrome'
-);
+```Wu
+print("Hello, World!\n")
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :apple: [Online Exams Might Be Cooked](https://therenegadecoder.com/teach/online-exams-might-be-cooked/)
 - :apple: [Encouraging Attendance With Peer Instruction](https://therenegadecoder.com/teach/encouraging-attendance-with-peer-instruction/)
 - :black_nib: [Conspiracy Theory: All Pro Sports Are Rigged Now](https://therenegadecoder.com/blog/conspiracy-theory-all-pro-sports-are-rigged-now/)
 - :apple: [Reflecting on My Teaching Journey Heading into 2026](https://therenegadecoder.com/teach/reflecting-on-my-teaching-journey-heading-into-2026/)
@@ -42,7 +18,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [Computer Science Career Advice in 2026? Your Guess Is as Good as Mine](https://therenegadecoder.com/blog/computer-science-career-advice-in-2026-your-guess-is-as-good-as-mine/)
 - :apple: [Why I Don’t Record My Lectures](https://therenegadecoder.com/teach/why-i-dont-record-my-lectures/)
 - :black_nib: [Should You Use Git on Personal Projects No One Will Ever See?](https://therenegadecoder.com/blog/should-you-use-git-on-personal-projects-no-one-will-ever-see/)
-- :black_nib: [The Era of Narks Is Upon Us](https://therenegadecoder.com/blog/the-era-of-narks-is-upon-us/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -55,4 +30,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-01-16 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-01-23 using [SnakeMD](https://www.snakemd.io).
