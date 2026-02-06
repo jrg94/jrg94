@@ -1,53 +1,16 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in Mirth, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Carp, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Mirth
-module sample-programs.baklava
-
-import std.prelude
-import std.world
-import std.list
-import std.str
-
-||| stack: n
-def abs [Int -- Nat] {
-    ||| if n < 0 then -n else n
-    dup 0 < if(-1 *, dup drop) Int.>Nat-clamp
-}
-
-||| stack: n (count), s (string)
-def repeat-string [Nat Str -- Str] {
-    ""                      ||| stack: n, s, result = ""
-    rotl                    ||| stack: s, result, n
-    repeat(                 ||| stack: s, result
-                            ||| repeat n times:
-        over                |||     stack: s, result, s
-        cat                 |||     stack: s, result = result + s
-    )
-    dip(drop)               ||| stack: result
-}
-
-||| stack: n
-def baklava-line [Int -- Str] {
-    abs                                 ||| stack: num-spaces = abs(n)
-    dup                                 ||| stack: num-spaces, num-spaces
-    " " repeat-string                   ||| stack: num-spaces, spaces = num-spaces " "
-    swap                                ||| stack: spaces, num-spaces
-    Nat.>Int -2 * 21 + Int.>Nat-clamp   ||| stack: spaces, num-stars = 21 - 2 * num-spaces
-    "*" repeat-string                   ||| stack: spaces, stars = num-stars "*"
-    cat                                 ||| stack: spaces + stars
-}
-
-def main {
-    ||| for n = -10 to 10:
-    |||    print baklava-line(n)
-    -10 10 range for(baklava-line print)
-}
+```Carp
+(defn main[]
+    (println* "Hello, World!")
+)
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [32 College Stories That Always Make Friends Laugh](https://therenegadecoder.com/blog/32-college-stories-that-always-make-friends-laugh/)
 - :computer: [Why Does == Sometimes Work on Integer Objects in Java?](https://therenegadecoder.com/code/why-does-sometimes-work-on-integer-objects-in-java/)
 - :apple: [Online Exams Might Be Cooked](https://therenegadecoder.com/teach/online-exams-might-be-cooked/)
 - :apple: [Encouraging Attendance With Peer Instruction](https://therenegadecoder.com/teach/encouraging-attendance-with-peer-instruction/)
@@ -57,7 +20,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [Not All Code Completion Is Generative AI](https://therenegadecoder.com/blog/not-all-code-completion-is-generative-ai/)
 - :black_nib: [AI Haters Stay Winning: What It’s Like to Be Constantly Vindicated](https://therenegadecoder.com/blog/ai-haters-stay-winning-what-its-like-to-be-constantly-vindicated/)
 - :black_nib: [Computer Science Career Advice in 2026? Your Guess Is as Good as Mine](https://therenegadecoder.com/blog/computer-science-career-advice-in-2026-your-guess-is-as-good-as-mine/)
-- :apple: [Why I Don’t Record My Lectures](https://therenegadecoder.com/teach/why-i-dont-record-my-lectures/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -70,4 +32,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-01-30 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-02-06 using [SnakeMD](https://www.snakemd.io).
