@@ -1,21 +1,19 @@
 # Welcome to My Profile!
 
-This week's code snippet, Fizz Buzz in Gravity, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Even Odd in Rexx, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Gravity
-func main() {
-	for (var i in 1...100) {
-		if (i % 15 == 0) {
-			System.print("FizzBuzz")
-		} else if (i % 5 == 0) {
-			System.print("Buzz")
-		} else if (i % 3 == 0) {
-			System.print("Fizz")
-		} else {
-			System.print(i)
-		}
-	}
-}
+```Rexx
+/* ARG with source string named in REXX program invocation */
+arg number
+If (DATATYPE(number, 'W') == 0) then signal err
+if (number // 2 == 0) then
+	say "Even"
+else
+	say "Odd"
+;exit
+
+Err:
+say 'Usage: please input a number'; exit
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
@@ -42,4 +40,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-02-20 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-02-27 using [SnakeMD](https://www.snakemd.io).
