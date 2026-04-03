@@ -1,50 +1,23 @@
 # Welcome to My Profile!
 
-This week's code snippet, Factorial in Nim, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Fibonacci in Moonscript, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Nim
-#[ 
-    Factorial in Nim
-    This program calculates the factorial of a non-negative integer.
-]#
+```Moonscript
+-- fibonacci function
+fibonacci = (n) ->
+    -- set up a, b, for i until n, print "i: n" then update a & b as the fibonacci sequence
+    a, b = 1, 1
+    for i = 1, n
+        print "#{i}: #{a}"
+        a, b = b, a + b
 
-import os
-import strutils
-
-const UsageMessage = "Usage: please input a non-negative integer"
-
-proc factorial(n: int): int =
-  # Calculates the factorial of n (n!).
-  if n == 0:
-    return 1
-  
-  var result = 1
-  for i in 1..n:
-    result *= i
-  
-  return result
-
-# The main execution block:
-block:
-  # Check 1: No input argument provided.
-  if paramCount() == 0:
-    quit(UsageMessage, 1)
-
-  let inputStr = paramStr(1)
-
-  # Check 2: Invalid Input (Empty String or Not a Number)
-  var n: int
-  try:
-    n = parseInt(inputStr)
-  except:
-    quit(UsageMessage, 1)
-
-  # Check 3: Invalid Input (Negative Number)
-  if n < 0:
-    quit(UsageMessage, 1)
-
-  # Print the calculated result.
-  echo factorial(n)
+-- main
+-- check if arg params are numbers and are greater than 0
+if arg[1] and tonumber(arg[1]) ~= nil and tonumber(arg[1]) >= 0
+    fibonacci tonumber(arg[1])
+-- else, return usage error msg
+else   
+    print "Usage: please input the count of fibonacci numbers to output"
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
@@ -71,4 +44,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-03-27 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-04-03 using [SnakeMD](https://www.snakemd.io).
