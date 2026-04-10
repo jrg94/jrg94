@@ -1,27 +1,28 @@
 # Welcome to My Profile!
 
-This week's code snippet, Fibonacci in Moonscript, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Quine in Cython, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Moonscript
--- fibonacci function
-fibonacci = (n) ->
-    -- set up a, b, for i until n, print "i: n" then update a & b as the fibonacci sequence
-    a, b = 1, 1
-    for i = 1, n
-        print "#{i}: #{a}"
-        a, b = b, a + b
+```Cython
+from libc.stdio cimport printf
 
--- main
--- check if arg params are numbers and are greater than 0
-if arg[1] and tonumber(arg[1]) ~= nil and tonumber(arg[1]) >= 0
-    fibonacci tonumber(arg[1])
--- else, return usage error msg
-else   
-    print "Usage: please input the count of fibonacci numbers to output"
+def main():
+    cdef bytes s = b"""from libc.stdio cimport printf
+
+def main():
+    cdef bytes s = b%c%c%c%s%c%c%c
+    printf(s, 34, 34, 34, s, 34, 34, 34)
+
+if __name__ == "__main__":
+    main()"""
+    printf(s, 34, 34, 34, s, 34, 34, 34)
+
+if __name__ == "__main__":
+    main()
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [You Will Never Learn a Language With Duolingo](https://therenegadecoder.com/blog/you-will-never-learn-a-language-with-duolingo/)
 - :black_nib: [The Cult of Efficiency Is a Plague](https://therenegadecoder.com/blog/the-cult-of-efficiency-is-a-plague/)
 - :black_nib: [Missing the Forest for the Trees: Why You Struggle to Solve Problems](https://therenegadecoder.com/blog/missing-the-forest-for-the-trees-why-you-struggle-to-solve-problems/)
 - :black_nib: [What It Feels Like to Be a Toddler Again: Learning a Language](https://therenegadecoder.com/blog/what-it-feels-like-to-be-a-toddler-again-learning-a-language/)
@@ -31,7 +32,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [Smug Yet Unserious](https://therenegadecoder.com/blog/smug-yet-unserious/)
 - :black_nib: [32 College Stories That Always Make Friends Laugh](https://therenegadecoder.com/blog/32-college-stories-that-always-make-friends-laugh/)
 - :computer: [Why Does == Sometimes Work on Integer Objects in Java?](https://therenegadecoder.com/code/why-does-sometimes-work-on-integer-objects-in-java/)
-- :apple: [Online Exams Might Be Cooked](https://therenegadecoder.com/teach/online-exams-might-be-cooked/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -44,4 +44,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-04-03 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-04-10 using [SnakeMD](https://www.snakemd.io).
