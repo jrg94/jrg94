@@ -1,27 +1,21 @@
 # Welcome to My Profile!
 
-This week's code snippet, Quine in Cython, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Baklava in Kotlin, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Cython
-from libc.stdio cimport printf
+```Kotlin
+fun main (args: Array<String>)
+{
+    for (i in 0..9)
+        println (" ".repeat (10 - i) + "*".repeat (i * 2 + 1));
 
-def main():
-    cdef bytes s = b"""from libc.stdio cimport printf
-
-def main():
-    cdef bytes s = b%c%c%c%s%c%c%c
-    printf(s, 34, 34, 34, s, 34, 34, 34)
-
-if __name__ == "__main__":
-    main()"""
-    printf(s, 34, 34, 34, s, 34, 34, 34)
-
-if __name__ == "__main__":
-    main()
+    for (i in 10 downTo 0)
+        println (" ".repeat (10 - i) + "*".repeat (i * 2 + 1));
+}
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [Giving Up Before Even Starting](https://therenegadecoder.com/blog/giving-up-before-even-starting/)
 - :black_nib: [You Will Never Learn a Language With Duolingo](https://therenegadecoder.com/blog/you-will-never-learn-a-language-with-duolingo/)
 - :black_nib: [The Cult of Efficiency Is a Plague](https://therenegadecoder.com/blog/the-cult-of-efficiency-is-a-plague/)
 - :black_nib: [Missing the Forest for the Trees: Why You Struggle to Solve Problems](https://therenegadecoder.com/blog/missing-the-forest-for-the-trees-why-you-struggle-to-solve-problems/)
@@ -31,7 +25,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [Buying a House Sucks](https://therenegadecoder.com/blog/buying-a-house-sucks/)
 - :black_nib: [Smug Yet Unserious](https://therenegadecoder.com/blog/smug-yet-unserious/)
 - :black_nib: [32 College Stories That Always Make Friends Laugh](https://therenegadecoder.com/blog/32-college-stories-that-always-make-friends-laugh/)
-- :computer: [Why Does == Sometimes Work on Integer Objects in Java?](https://therenegadecoder.com/code/why-does-sometimes-work-on-integer-objects-in-java/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -44,4 +37,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-04-10 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-04-17 using [SnakeMD](https://www.snakemd.io).
