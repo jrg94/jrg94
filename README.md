@@ -1,17 +1,43 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in Goby, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Even Odd in Odin, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Goby
-(-10..10).each do |n|
-    num_spaces = if n >= 0 n else -n end
-    num_stars = 21 - 2 * num_spaces
-    puts(" " * num_spaces + "*" * num_stars)
-end
+```Odin
+package main
+
+import "core:fmt"
+import "core:strconv"
+import "core:os"
+
+main :: proc() {
+    if len(os.args) != 2 {
+        usage()
+        return
+    }
+    n, ok := strconv.parse_int(os.args[1])
+    if !ok {
+        usage()
+        return
+    }
+    evenodd(n)
+}
+
+evenodd :: proc(n: int) {
+    if n % 2 == 0 {
+        fmt.println("Even")
+    } else {
+        fmt.println("Odd")
+    }
+}
+
+usage :: proc() {
+    fmt.println("Usage: please input a number")
+}
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [Thoughts on the Red Button vs. Blue Button Debate](https://therenegadecoder.com/blog/thoughts-on-the-red-button-vs-blue-button-debate/)
 - :apple: [What Happens When I’m Forced to Teach AI?](https://therenegadecoder.com/teach/what-happens-when-im-forced-to-teach-ai/)
 - :black_nib: [Giving Up Before Even Starting](https://therenegadecoder.com/blog/giving-up-before-even-starting/)
 - :black_nib: [You Will Never Learn a Language With Duolingo](https://therenegadecoder.com/blog/you-will-never-learn-a-language-with-duolingo/)
@@ -21,7 +47,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [Things I Don’t Want AI To Help Me With](https://therenegadecoder.com/blog/things-i-dont-want-ai-to-help-me-with/)
 - :black_nib: [Why I Rebel Against the Use of Generative AI](https://therenegadecoder.com/blog/why-i-rebel-against-the-use-of-generative-ai/)
 - :black_nib: [Buying a House Sucks](https://therenegadecoder.com/blog/buying-a-house-sucks/)
-- :black_nib: [Smug Yet Unserious](https://therenegadecoder.com/blog/smug-yet-unserious/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -34,4 +59,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-04-24 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-05-01 using [SnakeMD](https://www.snakemd.io).
