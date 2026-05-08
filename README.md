@@ -1,42 +1,30 @@
 # Welcome to My Profile!
 
-This week's code snippet, Even Odd in Odin, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Baklava in F\*, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Odin
-package main
+```F\*
+module Baklava
 
-import "core:fmt"
-import "core:strconv"
-import "core:os"
+open FStar.IO
+open FStar.Math.Lib
+open FStar.Mul
 
-main :: proc() {
-    if len(os.args) != 2 {
-        usage()
-        return
-    }
-    n, ok := strconv.parse_int(os.args[1])
-    if !ok {
-        usage()
-        return
-    }
-    evenodd(n)
-}
+let baklava_line (n:nat {n <= 20}) : string =
+  let num_spaces:nat = (abs (n - 10)) in
+  let num_stars:nat = 21 - 2 * num_spaces in
+  (String.make num_spaces ' ') ^ (String.make num_stars '*') ^ "\n"
 
-evenodd :: proc(n: int) {
-    if n % 2 == 0 {
-        fmt.println("Even")
-    } else {
-        fmt.println("Odd")
-    }
-}
+let rec baklava (lines:string) (n:nat {n <= 20}) : string =
+  match n with
+  | 0 -> lines ^ (baklava_line 0)
+  | _ -> lines ^ (baklava_line n) ^ (baklava lines (n - 1))
 
-usage :: proc() {
-    fmt.println("Usage: please input a number")
-}
+let main = print_string (baklava "" 20)
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [Even My Charitability Has Limits](https://therenegadecoder.com/blog/even-my-charitability-has-limits/)
 - :black_nib: [Thoughts on the Red Button vs. Blue Button Debate](https://therenegadecoder.com/blog/thoughts-on-the-red-button-vs-blue-button-debate/)
 - :apple: [What Happens When I’m Forced to Teach AI?](https://therenegadecoder.com/teach/what-happens-when-im-forced-to-teach-ai/)
 - :black_nib: [Giving Up Before Even Starting](https://therenegadecoder.com/blog/giving-up-before-even-starting/)
@@ -46,7 +34,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [What It Feels Like to Be a Toddler Again: Learning a Language](https://therenegadecoder.com/blog/what-it-feels-like-to-be-a-toddler-again-learning-a-language/)
 - :black_nib: [Things I Don’t Want AI To Help Me With](https://therenegadecoder.com/blog/things-i-dont-want-ai-to-help-me-with/)
 - :black_nib: [Why I Rebel Against the Use of Generative AI](https://therenegadecoder.com/blog/why-i-rebel-against-the-use-of-generative-ai/)
-- :black_nib: [Buying a House Sucks](https://therenegadecoder.com/blog/buying-a-house-sucks/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -59,4 +46,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-05-01 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-05-08 using [SnakeMD](https://www.snakemd.io).
