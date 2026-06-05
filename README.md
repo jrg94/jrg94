@@ -1,13 +1,33 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Fennel, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Fizz Buzz in Batch, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Fennel
-(print "Hello, World!")
+```Batch
+@ECHO OFF
+SETLOCAL ENABLEDELAYEDEXPANSION
+
+for /l %%i in (1,1,100) do (
+    set /A "m3=%%i %% 3"
+    set /A "m5=%%i %% 5"
+    set /A "m15=%%i %% 15"
+
+    if !m15! equ 0 (
+        echo FizzBuzz
+    ) else if !m3! equ 0 (
+        echo Fizz
+    ) else if !m5! equ 0 (
+        echo Buzz
+    ) else (
+        echo %%i
+    )
+)
+
+ENDLOCAL
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :apple: [Another Year, Another Japan Trip](https://therenegadecoder.com/teach/another-year-another-japan-trip/)
 - :apple: [The Importance of Getting Summers Off](https://therenegadecoder.com/teach/the-importance-of-getting-summers-off/)
 - :black_nib: [Practicing My Toddler-like Japanese in Japan](https://therenegadecoder.com/blog/practicing-my-toddler-like-japanese-in-japan/)
 - :black_nib: [Even My Charitability Has Limits](https://therenegadecoder.com/blog/even-my-charitability-has-limits/)
@@ -17,7 +37,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [You Will Never Learn a Language With Duolingo](https://therenegadecoder.com/blog/you-will-never-learn-a-language-with-duolingo/)
 - :black_nib: [The Cult of Efficiency Is a Plague](https://therenegadecoder.com/blog/the-cult-of-efficiency-is-a-plague/)
 - :black_nib: [Missing the Forest for the Trees: Why You Struggle to Solve Problems](https://therenegadecoder.com/blog/missing-the-forest-for-the-trees-why-you-struggle-to-solve-problems/)
-- :black_nib: [What It Feels Like to Be a Toddler Again: Learning a Language](https://therenegadecoder.com/blog/what-it-feels-like-to-be-a-toddler-again-learning-a-language/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -30,4 +49,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-05-29 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-06-05 using [SnakeMD](https://www.snakemd.io).
