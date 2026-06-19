@@ -1,33 +1,14 @@
 # Welcome to My Profile!
 
-This week's code snippet, Fizz Buzz in Eiffel, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Fetlang, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Eiffel
-class
-    fizz_buzz
-
-create
-    make
-
-feature
-    make
-        do
-            across 1 |..| 100 as i
-            loop
-                if i.item \\ 15 = 0 then io.put_string("FizzBuzz")
-                elseif i.item \\ 5 = 0 then io.put_string("Buzz")
-                elseif i.item \\ 3 = 0 then io.put_string("Fizz")
-                else io.put_integer(i.item)
-                end
-                
-                io.put_new_line
-            end
-        end
-    end
+```Fetlang
+make slave scream "Hello, World!"
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [I Made the Mistake of Visiting the Vibe Coding Subreddit](https://therenegadecoder.com/blog/i-made-the-mistake-of-visiting-the-vibe-coding-subreddit/)
 - :black_nib: [You’ve Fallen for the Red/Blue Button Trap](https://therenegadecoder.com/blog/youve-fallen-for-the-red-blue-button-trap/)
 - :apple: [Another Year, Another Japan Trip](https://therenegadecoder.com/teach/another-year-another-japan-trip/)
 - :apple: [The Importance of Getting Summers Off](https://therenegadecoder.com/teach/the-importance-of-getting-summers-off/)
@@ -37,7 +18,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :apple: [What Happens When I’m Forced to Teach AI?](https://therenegadecoder.com/teach/what-happens-when-im-forced-to-teach-ai/)
 - :black_nib: [Giving Up Before Even Starting](https://therenegadecoder.com/blog/giving-up-before-even-starting/)
 - :black_nib: [You Will Never Learn a Language With Duolingo](https://therenegadecoder.com/blog/you-will-never-learn-a-language-with-duolingo/)
-- :black_nib: [The Cult of Efficiency Is a Plague](https://therenegadecoder.com/blog/the-cult-of-efficiency-is-a-plague/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -50,4 +30,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-06-12 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-06-19 using [SnakeMD](https://www.snakemd.io).
