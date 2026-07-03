@@ -1,33 +1,15 @@
 # Welcome to My Profile!
 
-This week's code snippet, Fizz Buzz in Eiffel, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Orc, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Eiffel
-class
-    fizz_buzz
-
-create
-    make
-
-feature
-    make
-        do
-            across 1 |..| 100 as i
-            loop
-                if i.item \\ 15 = 0 then io.put_string("FizzBuzz")
-                elseif i.item \\ 5 = 0 then io.put_string("Buzz")
-                elseif i.item \\ 3 = 0 then io.put_string("Fizz")
-                else io.put_integer(i.item)
-                end
-                
-                io.put_new_line
-            end
-        end
-    end
+```Orc
+Println("Hello, World!") >>
+stop
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [I Genuinely Don’t Understand Why People Tolerate Hallucinations in AI](https://therenegadecoder.com/blog/i-genuinely-dont-understand-why-people-tolerate-hallucinations-in-ai/)
 - :black_nib: [Human Review of AI Output Is Not the Path Forward](https://therenegadecoder.com/blog/human-review-of-ai-output-is-not-the-path-forward/)
 - :black_nib: [I Made the Mistake of Visiting the Vibe Coding Subreddit](https://therenegadecoder.com/blog/i-made-the-mistake-of-visiting-the-vibe-coding-subreddit/)
 - :black_nib: [You’ve Fallen for the Red/Blue Button Trap](https://therenegadecoder.com/blog/youve-fallen-for-the-red-blue-button-trap/)
@@ -37,7 +19,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [Even My Charitability Has Limits](https://therenegadecoder.com/blog/even-my-charitability-has-limits/)
 - :black_nib: [Thoughts on the Red Button vs. Blue Button Debate](https://therenegadecoder.com/blog/thoughts-on-the-red-button-vs-blue-button-debate/)
 - :apple: [What Happens When I’m Forced to Teach AI?](https://therenegadecoder.com/teach/what-happens-when-im-forced-to-teach-ai/)
-- :black_nib: [Giving Up Before Even Starting](https://therenegadecoder.com/blog/giving-up-before-even-starting/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -50,4 +31,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-06-26 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-07-03 using [SnakeMD](https://www.snakemd.io).
