@@ -1,22 +1,18 @@
 # Welcome to My Profile!
 
-This week's code snippet, Hello World in Lucee, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Baklava in Chapel, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Lucee
-<html>
-	<head>
-		<title>My first page</title>
-	</head>
-	<body>
-		<cfoutput>
-		<pre>Hello, World!</pre>
-		</cfoutput>
-	</body>
-</html>
+```Chapel
+for n in -10..10 {
+    var num_spaces = abs(n);
+    var num_stars = 21 - 2 * num_spaces;
+    writeln(" " * num_spaces + "*" * num_stars);
+}
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [LLMs Got Everyone Sounding the Same Now](https://therenegadecoder.com/blog/llms-got-everyone-sounding-the-same-now/)
 - :black_nib: [6v6 Overwatch Is a Joke](https://therenegadecoder.com/blog/6v6-overwatch-is-a-joke/)
 - :black_nib: [I Genuinely Don’t Understand Why People Tolerate Hallucinations in AI](https://therenegadecoder.com/blog/i-genuinely-dont-understand-why-people-tolerate-hallucinations-in-ai/)
 - :black_nib: [Human Review of AI Output Is Not the Path Forward](https://therenegadecoder.com/blog/human-review-of-ai-output-is-not-the-path-forward/)
@@ -26,7 +22,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :apple: [The Importance of Getting Summers Off](https://therenegadecoder.com/teach/the-importance-of-getting-summers-off/)
 - :black_nib: [Practicing My Toddler-like Japanese in Japan](https://therenegadecoder.com/blog/practicing-my-toddler-like-japanese-in-japan/)
 - :black_nib: [Even My Charitability Has Limits](https://therenegadecoder.com/blog/even-my-charitability-has-limits/)
-- :black_nib: [Thoughts on the Red Button vs. Blue Button Debate](https://therenegadecoder.com/blog/thoughts-on-the-red-button-vs-blue-button-debate/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -39,4 +34,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-07-10 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-07-17 using [SnakeMD](https://www.snakemd.io).
