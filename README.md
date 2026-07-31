@@ -1,30 +1,22 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in Wyvern, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Fizz Buzz in Befunge, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Wyvern
-require stdout
-
-def strRepeat(n:Int, s:String): String
-    if (n < 1) { "" } else { s + strRepeat(n - 1, s) }
-
-def abs(n:Int): Int
-    if (n < 0) { -n } else { n }
-
-def baklava(n:Int, end:Int): Unit
-    // This is definitely the weirdest formatting for an if-else statement that I've ever seen
-    if (n > end)
-            unit
-        else
-            val numSpaces:Int = abs(n)
-            stdout.print(strRepeat(numSpaces, " ") + strRepeat(21 - 2 * numSpaces, "*") + "\n")
-            baklava(n + 1, end)
-
-baklava(-10, 10)
+```Befunge
+1 >  :3%   v            
+   v  \0   _ "zziF",,,,v
+   v  \1               <
+   > :5%   v            
+   v _v#\  _ "zzuB",,,,v
+   v  >:.  v $\        <
+   v       <           @
+   > :25*  ::,  *1-`   |
+  ^        +1          <
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :apple: [Generative AI in Education is Pay-to-Lose](https://therenegadecoder.com/teach/generative-ai-in-education-is-pay-to-lose/)
 - :black_nib: [My First “I Have a Toddler” Moment](https://therenegadecoder.com/blog/my-first-i-have-a-toddler-moment/)
 - :black_nib: [LLMs Got Everyone Sounding the Same Now](https://therenegadecoder.com/blog/llms-got-everyone-sounding-the-same-now/)
 - :black_nib: [6v6 Overwatch Is a Joke](https://therenegadecoder.com/blog/6v6-overwatch-is-a-joke/)
@@ -34,7 +26,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [You’ve Fallen for the Red/Blue Button Trap](https://therenegadecoder.com/blog/youve-fallen-for-the-red-blue-button-trap/)
 - :apple: [Another Year, Another Japan Trip](https://therenegadecoder.com/teach/another-year-another-japan-trip/)
 - :apple: [The Importance of Getting Summers Off](https://therenegadecoder.com/teach/the-importance-of-getting-summers-off/)
-- :black_nib: [Practicing My Toddler-like Japanese in Japan](https://therenegadecoder.com/blog/practicing-my-toddler-like-japanese-in-japan/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -47,4 +38,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-07-24 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-07-31 using [SnakeMD](https://www.snakemd.io).
