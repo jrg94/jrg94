@@ -1,23 +1,17 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in Scilab, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Hello World in Koka, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Scilab
-function [result] = strRepeat(n, s)
-    result = ''
-    for i = 1:n
-        result = result + s
-    end
-endfunction
-
-for i = -10:10
-    numSpaces = abs(i)
-    mprintf('%s%s\n', strRepeat(numSpaces, ' '), strRepeat(21 - 2 * numSpaces, '*'))
-end
+```Koka
+fun main() 
+{
+    println("Hello, World!")
+}
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :black_nib: [Generative AI Lets You Be as Delusional as a CEO](https://therenegadecoder.com/blog/generative-ai-lets-you-be-as-delusional-as-a-ceo/)
 - :black_nib: [Recommended Reading: “The Law of Leaky Abstractions” by Joel Spolsky](https://therenegadecoder.com/blog/recommended-reading-the-law-of-leaky-abstractions-by-joel-spolsky/)
 - :black_nib: [LLMs Are Not Like Compilers](https://therenegadecoder.com/blog/llms-are-not-like-compilers/)
 - :apple: [How Do We Assess Understanding in the Age of Slop?](https://therenegadecoder.com/teach/how-do-we-assess-understanding-in-the-age-of-slop/)
@@ -27,7 +21,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :apple: [Writing Code on Paper Is Good Actually](https://therenegadecoder.com/teach/writing-code-on-paper-is-good-actually/)
 - :black_nib: [People Don’t Like to Be Deceived (by AI)](https://therenegadecoder.com/blog/people-dont-like-to-be-deceived-by-ai/)
 - :apple: [Generative AI in Education is Pay-to-Lose](https://therenegadecoder.com/teach/generative-ai-in-education-is-pay-to-lose/)
-- :black_nib: [My First “I Have a Toddler” Moment](https://therenegadecoder.com/blog/my-first-i-have-a-toddler-moment/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -40,4 +33,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-09-25 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-10-02 using [SnakeMD](https://www.snakemd.io).
