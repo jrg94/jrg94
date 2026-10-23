@@ -1,46 +1,33 @@
 # Welcome to My Profile!
 
-This week's code snippet, Baklava in Fetlang, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
+This week's code snippet, Baklava in Owl Lisp, is brought to you by [Subete](https://subete.jeremygrifski.com/en/latest/) and the [Sample Programs repo](https://sampleprograms.io/).
 
-```Fetlang
-worship Zera (0 * 1)
-spank Nora ten times (0 - 10)
-lick Enzo eleven times (0 + 11)
+```Owl Lisp
+(define (string-repeat n str)
+  (fold string-append "" (make-list n str))
+)
 
-(while Nora < Enzo)
-while Nora is submissive to Enzo
-    (Spencer = number of spaces = abs(Nora))
-    if Nora is submissive to Zera
-        have Nora spank Spencer (0 - Nora)
-    otherwise
-        have Nora lick Spencer (0 + Nora)
+(define (baklava-line n)
+  (define num-spaces (abs n))
+  (define num-stars (- 21 (* 2 num-spaces)))
+  (print (string-repeat num-spaces " ") (string-repeat num-stars "*"))
+)
 
-    (Starr = number of stars = 21 - 2 * Spencer)
-    lick Starr twenty one times (0 + 21)
-    have Spencer spank Starr (21 - Spencer)
-    have Spencer spank Starr (21 - 2 * Spencer)
+(define (baklava n ne)
+  (if (<= n ne)
+    (begin
+      (baklava-line n)
+      (baklava (+ n 1) ne)
+    )
+  )
+)
 
-    (Output " " Spencer times
-     Note: Spencer will be zero when this loop exits)
-    while Spencer is dominant towards Zera
-        make slave moan " "
-        spank Spencer
-
-    (Output "*" Starr times
-     Note: Starr will be zero when this loop exits)
-    while Starr is dominant towards Zera
-        make slave moan "*"
-        spank Starr
-
-    (Output newline)
-    make slave scream
-
-    (Increment Nora)
-    lick Nora
+( (args) (baklava -10 10))
 ```
 
 Below you'll find an up-to-date list of articles by me on [The Renegade Coder](https://therenegadecoder.com). For ease of browsing, emojis let you know the article category (i.e., blog: :black_nib:, code: :computer:, meta: :thought_balloon:, teach: :apple:)
 
+- :apple: [The Other Side of Letters of Recommendation](https://therenegadecoder.com/teach/the-other-side-of-letters-of-recommendation/)
 - :black_nib: [Yet Another Consequence of Car-Centric Infrastructure](https://therenegadecoder.com/blog/yet-another-consequence-of-car-centric-infrastructure/)
 - :apple: [What’s More Important: Having Knowledge or Knowing How to Access Knowledge?](https://therenegadecoder.com/teach/whats-more-important-having-knowledge-or-knowing-how-to-access-knowledge/)
 - :black_nib: [Generative AI Lets You Be as Delusional as a CEO](https://therenegadecoder.com/blog/generative-ai-lets-you-be-as-delusional-as-a-ceo/)
@@ -50,7 +37,6 @@ Below you'll find an up-to-date list of articles by me on [The Renegade Coder](h
 - :black_nib: [I Don’t Really Trust Surveys](https://therenegadecoder.com/blog/i-dont-really-trust-surveys/)
 - :black_nib: [AI Literacy, Shame, and Nuance](https://therenegadecoder.com/blog/ai-literacy-shame-and-nuance/)
 - :apple: [Recommended Reading: “To teach in the time of ChatGPT is to know pain” by Scott K. Johnson](https://therenegadecoder.com/teach/recommended-reading-to-teach-in-the-time-of-chatgpt-is-to-know-pain-by-scott-k-johnson/)
-- :apple: [Writing Code on Paper Is Good Actually](https://therenegadecoder.com/teach/writing-code-on-paper-is-good-actually/)
 
 Also, here are some fun links you can use to support my work.
 
@@ -63,4 +49,4 @@ Also, here are some fun links you can use to support my work.
 
 ***
 
-This document was automatically rendered on 2026-10-16 using [SnakeMD](https://www.snakemd.io).
+This document was automatically rendered on 2026-10-23 using [SnakeMD](https://www.snakemd.io).
